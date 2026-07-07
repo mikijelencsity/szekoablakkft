@@ -4,20 +4,20 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "How much will my project cost?",
-    a: "It depends on scope, but you'll always get a transparent, itemized quote after a free on-site inspection — before any work begins.",
+    q: "Mennyibe kerül a munka?",
+    a: "A munka terjedelmétől függ, de mindig átlátható, tételes árajánlatot kap egy ingyenes helyszíni felmérés után — még mielőtt bármilyen munka elkezdődne.",
   },
   {
-    q: "How long does a typical project take?",
-    a: "Window replacement usually takes 1–3 days per home. Full renovations vary, and we give you a realistic timeline in your quote.",
+    q: "Mennyi ideig tart egy tipikus munka?",
+    a: "Egy ablakcsere általában 1–3 nap otthononként. A teljes felújítások ideje változó, és reális ütemtervet adunk az árajánlatban.",
   },
   {
-    q: "What does the process actually look like?",
-    a: "Contact us, we visit and inspect on-site, you receive an offer, we execute the work, and we finish with a walkthrough together.",
+    q: "Hogy néz ki a folyamat?",
+    a: "Felveszi velünk a kapcsolatot, kiszállunk és helyszíni felmérést végzünk, árajánlatot kap, elvégezzük a munkát, és közös átadással zárunk.",
   },
   {
-    q: "Do you offer any guarantees?",
-    a: "Yes — all installation work is covered by warranty, and materials carry manufacturer guarantees. Details are included in your quote.",
+    q: "Vállalnak garanciát?",
+    a: "Igen — minden beépítési munkára garanciát vállalunk, az anyagokra pedig gyártói garancia vonatkozik. A részletek az árajánlatban szerepelnek.",
   },
 ];
 
@@ -28,10 +28,10 @@ export default function FAQSection() {
     <section className="bg-white py-24 lg:py-32">
       <div className="container-px max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-wider text-brand">
-          Common questions
+          Gyakori kérdések
         </p>
         <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
-          Before you ask, we answer.
+          Mielőtt kérdezné, válaszolunk.
         </h2>
 
         <div className="mt-12 flex flex-col divide-y divide-black/10 border-t border-black/10">

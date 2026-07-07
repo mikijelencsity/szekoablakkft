@@ -7,21 +7,21 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 
 const projects = [
   {
-    title: "Family home window replacement",
-    location: "Budapest XI. district",
+    title: "Családi ház ablakcsere",
+    location: "Budapest, XI. kerület",
     image:
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1600&auto=format&fit=crop",
     size: "lg:col-span-2 lg:row-span-2",
   },
   {
-    title: "Kitchen renovation",
+    title: "Konyhafelújítás",
     location: "Szentendre",
     image:
       "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop",
     size: "",
   },
   {
-    title: "Exterior repaint",
+    title: "Homlokzatfestés",
     location: "Gödöllő",
     image:
       "https://images.unsplash.com/photo-1595514535215-a68f0e6a1b5c?q=80&w=1600&auto=format&fit=crop",
@@ -60,10 +60,10 @@ export default function ProjectsSection() {
     <section ref={sectionRef} className="bg-white py-24 lg:py-32">
       <div className="container-px mb-14 max-w-2xl lg:mb-20">
         <p className="text-sm font-medium uppercase tracking-wider text-brand">
-          Proof, not promises
+          Bizonyíték, nem ígéret
         </p>
         <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
-          Real projects, real results.
+          Valódi projektek, valódi eredmények.
         </h2>
       </div>
 
@@ -91,16 +91,16 @@ export default function ProjectsSection() {
 
       <div className="container-px mt-20">
         <p className="mb-6 text-sm font-medium uppercase tracking-wider text-brand">
-          Drag to compare
+          Húzza az összehasonlításhoz
         </p>
         <div className="grid gap-8 lg:grid-cols-2">
           <BeforeAfterSlider
-            alt="Living room window upgrade"
+            alt="Nappali ablakcsere"
             before="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop"
             after="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
           />
           <BeforeAfterSlider
-            alt="Facade repaint"
+            alt="Homlokzatfestés"
             before="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop"
             after="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=1200&auto=format&fit=crop"
           />

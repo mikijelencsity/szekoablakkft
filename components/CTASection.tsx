@@ -36,14 +36,15 @@ export default function CTASection() {
     >
       <div className="cta-content container-px mx-auto max-w-xl">
         <h2 className="text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
-          Let&apos;s make your home better.
+          Tegyük szebbé az otthonát.
         </h2>
         <p className="mt-4 text-white/70">
-          Free, no-obligation on-site inspection. No pressure, just a clear quote.
+          Ingyenes, kötelezettség nélküli helyszíni felmérés. Semmi nyomás, csak
+          egy átlátható árajánlat.
         </p>
         <div className="mt-9 flex justify-center">
-          <Button href="/#contact" variant="onDark">
-            Request a free quote
+          <Button href="#contact" variant="onDark">
+            Kérjen ingyenes árajánlatot
           </Button>
         </div>
       </div>

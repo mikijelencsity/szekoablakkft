@@ -13,9 +13,9 @@ const satoshi = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Szeko Ablak Kft | Windows, Renovation & Construction",
+  title: "Szeko Ablak Kft | Ablak, Redőny, Felújítás",
   description:
-    "Fast, reliable, and high-quality window installation, renovation, and construction services. Request your free, no-obligation quote today.",
+    "Gyors, megbízható és magas minőségű ablakcsere, redőny, felújítás és építőipari munkák. Kérjen ingyenes, kötelezettség nélküli árajánlatot még ma.",
 };
 
 export default function RootLayout({

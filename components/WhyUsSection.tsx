@@ -6,16 +6,16 @@ import { gsap } from "@/lib/gsap";
 
 const reasons = [
   {
-    title: "18 years, one team",
-    desc: "The same core crew has worked together for nearly two decades — no rotating subcontractors.",
+    title: "18 év, egy csapat",
+    desc: "Ugyanaz a törzscsapat dolgozik együtt közel két évtizede — nincs cserélődő alvállalkozó.",
   },
   {
-    title: "Clean execution",
-    desc: "We protect your floors, seal off dust, and leave the site tidy every single day.",
+    title: "Tiszta kivitelezés",
+    desc: "Letakarjuk a padlót, elzárjuk a port, és minden nap rendben hagyjuk a munkaterületet.",
   },
   {
-    title: "Direct communication",
-    desc: "You talk to the person doing the work, not a call center reading a script.",
+    title: "Közvetlen kommunikáció",
+    desc: "Azzal beszél, aki a munkát végzi — nem egy ügyfélszolgálati szöveggel.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function WhyUsSection() {
           <div ref={imageRef} className="absolute inset-0 -top-[6%] h-[112%] w-full">
             <Image
               src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop"
-              alt="Construction crew at work"
+              alt="Építőcsapat munka közben"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 45vw, 100vw"
@@ -73,10 +73,10 @@ export default function WhyUsSection() {
 
         <div className="flex flex-col justify-center">
           <p className="text-sm font-medium uppercase tracking-wider text-white/60">
-            Why us
+            Miért mi
           </p>
           <h2 className="mt-4 max-w-md text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
-            The safe choice for work on your home.
+            A biztos választás az otthonán végzett munkához.
           </h2>
 
           <div className="mt-10 flex flex-col gap-8">

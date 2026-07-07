@@ -57,10 +57,10 @@ export default function BeforeAfterSlider({
       </div>
 
       <span className="absolute left-3 top-3 rounded-full bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-        Before
+        Előtte
       </span>
       <span className="absolute right-3 top-3 rounded-full bg-black/50 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-        After
+        Utána
       </span>
     </div>
   );
