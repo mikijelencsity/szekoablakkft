@@ -131,24 +131,6 @@ export default function Header() {
 
         {/* Content */}
         <div className="relative flex h-full flex-col px-6 pb-10 pt-24">
-          <div
-            style={{
-              transition:
-                "opacity 0.5s ease, transform 0.5s cubic-bezier(0.16,1,0.3,1)",
-              transitionDelay: open ? "100ms" : "0ms",
-              opacity: open ? 1 : 0,
-              transform: open ? "translateY(0)" : "translateY(-10px)",
-            }}
-          >
-            <Image
-              src="/logo.webp"
-              alt="Szeko Ablak Kft"
-              width={783}
-              height={282}
-              priority
-              className="h-auto w-52"
-            />
-          </div>
 
           <nav className="flex flex-1 flex-col justify-center">
             {NAV.map((item, i) => (
