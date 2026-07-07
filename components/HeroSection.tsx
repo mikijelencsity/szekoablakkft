@@ -116,7 +116,8 @@ export default function HeroSection() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.55)_0%,rgba(6,9,14,0.15)_30%,rgba(6,9,14,0.35)_62%,rgba(6,9,14,0.92)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.72)_0%,rgba(6,9,14,0.5)_28%,rgba(6,9,14,0.5)_52%,rgba(6,9,14,0.72)_78%,rgba(6,9,14,0.96)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
       </div>
 
       {/* Body */}
@@ -124,12 +125,12 @@ export default function HeroSection() {
         <div className="max-w-2xl pb-14 lg:pb-20">
           <div
             ref={eyebrowRef}
-            className="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-white/75"
+            className="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.7)]"
           >
             Ablak · Redőny · Felújítás — Alapítva 2007
           </div>
 
-          <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem] [text-shadow:0_2px_30px_rgba(0,0,0,0.5)]">
+          <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem] [text-shadow:0_2px_18px_rgba(0,0,0,0.75),0_1px_3px_rgba(0,0,0,0.5)]">
             {HEADLINE.map((line, i) => (
               <span
                 key={line}
@@ -147,7 +148,7 @@ export default function HeroSection() {
             <Button href="#cta">Kérjen ingyenes árajánlatot</Button>
             <Link
               href="#projects"
-              className="text-[15px] font-medium text-white/90 underline-offset-4 hover:text-white hover:underline"
+              className="text-[15px] font-medium text-white underline-offset-4 [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] hover:underline"
             >
               Referenciák →
             </Link>
@@ -163,12 +164,12 @@ export default function HeroSection() {
         {CREDENTIALS.map((c) => (
           <div
             key={c.label}
-            className="border-t border-white/20 px-1 pt-4 sm:px-4"
+            className="border-t border-white/25 px-1 pt-4 sm:px-4"
           >
-            <div className="text-base font-bold tabular-nums text-white lg:text-lg">
+            <div className="text-base font-bold tabular-nums text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] lg:text-lg">
               {c.value}
             </div>
-            <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.05em] text-white/60">
+            <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.05em] text-white/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.7)]">
               {c.label}
             </div>
           </div>
