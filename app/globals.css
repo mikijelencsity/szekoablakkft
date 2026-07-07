@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --ink: #12181f;
+  --ink-soft: #4a5563;
+  --brand-blue: #2457ff;
+  --brand-blue-dark: #123bb5;
+  --brand-blue-tint: #eef2ff;
+  --surface-dark: #0b1220;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-brand: var(--brand-blue);
+  --color-brand-dark: var(--brand-blue-dark);
+  --color-brand-tint: var(--brand-blue-tint);
+  --color-surface-dark: var(--surface-dark);
+  --font-sans: var(--font-satoshi);
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-satoshi), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--brand-blue);
+  color: white;
+}
+
+.container-px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container-px {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@keyframes scrollcue {
+  0%,
+  100% {
+    transform: translateY(-4px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(24px);
+    opacity: 1;
+  }
+}
+
+.animate-scrollcue {
+  animation: scrollcue 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scrollcue {
+    animation: none;
+  }
+}
+
+/* Preloader blueprint grid — fades out toward the centre */
+.preloader-grid {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(36, 87, 255, 0.07) 0 1px,
+      transparent 1px 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(36, 87, 255, 0.07) 0 1px,
+      transparent 1px 30px
+    );
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    transparent 22%,
+    #000 68%
+  );
+  mask-image: radial-gradient(circle at 50% 50%, transparent 22%, #000 68%);
+}
+
+/* Process timeline (scroll-fill) */
+.proc-fill-h {
+  width: 0;
+  transition: width 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.proc.is-active .proc-fill-h {
+  width: 100%;
+}
+.proc-fill-v {
+  height: 0;
+  transition: height 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.proc.is-active .proc-fill-v {
+  height: 100%;
+}
+.proc-dot {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+    color 0.4s ease, box-shadow 0.4s ease;
+}
+.proc.is-active .proc-dot {
+  background-color: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+  box-shadow: 0 6px 16px -4px rgba(36, 87, 255, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proc-fill-h,
+  .proc-fill-v,
+  .proc-dot {
+    transition: none;
+  }
+}
