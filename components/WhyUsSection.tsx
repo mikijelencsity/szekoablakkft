@@ -76,7 +76,7 @@ export default function WhyUsSection() {
             Miért mi
           </p>
           <h2 className="mt-4 max-w-md text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
-            A biztos választás az otthonán végzett munkához.
+            Az otthonán végzett munka jó kezekben.
           </h2>
 
           <div className="mt-10 flex flex-col gap-8">
