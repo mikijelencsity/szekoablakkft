@@ -158,7 +158,7 @@ export default function HeroSection() {
       {/* Credential bar */}
       <div
         ref={barRef}
-        className="container-px relative z-10 grid grid-cols-2 pb-8 sm:grid-cols-4"
+        className="container-px relative z-10 grid grid-cols-2 gap-y-6 pb-28 sm:grid-cols-4 sm:gap-y-0 sm:pb-24"
       >
         {CREDENTIALS.map((c) => (
           <div
