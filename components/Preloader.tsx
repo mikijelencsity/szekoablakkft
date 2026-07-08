@@ -86,7 +86,7 @@ export default function Preloader() {
 
       {/* Logo */}
       <Image
-        src="/logo.webp"
+        src="/logo-mark.webp"
         alt="Szeko Ablak Kft"
         width={900}
         height={332}

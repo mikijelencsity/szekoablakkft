@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Image
-              src="/logo.webp"
+              src="/logo-mark.webp"
               alt="Szeko Ablak Kft"
               width={900}
               height={332}
