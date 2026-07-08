@@ -70,6 +70,39 @@ body {
   }
 }
 
+/* Footer aurora — slow drifting blue glows */
+@keyframes aurora1 {
+  to {
+    transform: translate(12%, 10%) scale(1.1);
+  }
+}
+@keyframes aurora2 {
+  to {
+    transform: translate(-10%, 8%) scale(1.15);
+  }
+}
+@keyframes aurora3 {
+  to {
+    transform: translate(8%, -12%) scale(1.1);
+  }
+}
+.aurora-1 {
+  animation: aurora1 14s ease-in-out infinite alternate;
+}
+.aurora-2 {
+  animation: aurora2 18s ease-in-out infinite alternate;
+}
+.aurora-3 {
+  animation: aurora3 16s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora-1,
+  .aurora-2,
+  .aurora-3 {
+    animation: none;
+  }
+}
+
 /* Preloader blueprint grid — fades out toward the centre */
 .preloader-grid {
   background-image: repeating-linear-gradient(
