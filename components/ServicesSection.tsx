@@ -102,11 +102,11 @@ export default function ServicesSection() {
 
   return (
     <section ref={sectionRef} className="bg-white py-24 lg:py-32">
-      <div className="container-px mb-16 max-w-2xl lg:mb-20">
-        <p className="text-sm font-medium uppercase tracking-wider text-brand">
+      <div className="container-px mb-16 max-w-3xl lg:mb-24">
+        <p className="text-sm font-medium uppercase tracking-wider text-brand lg:text-base">
           Amit csinálunk
         </p>
-        <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+        <h2 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
           Öt szolgáltatás, egy megbízható csapat.
         </h2>
       </div>
