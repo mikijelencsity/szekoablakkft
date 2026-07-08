@@ -26,11 +26,11 @@ export default function FAQSection() {
 
   return (
     <section className="bg-white py-24 lg:py-32">
-      <div className="container-px max-w-2xl">
-        <p className="text-sm font-medium uppercase tracking-wider text-brand">
+      <div className="container-px mx-auto max-w-2xl">
+        <p className="text-center text-sm font-medium uppercase tracking-wider text-brand">
           Gyakori kérdések
         </p>
-        <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+        <h2 className="mt-4 text-center text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
           Mielőtt kérdezné, válaszolunk.
         </h2>
 
