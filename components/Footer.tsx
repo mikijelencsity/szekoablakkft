@@ -67,8 +67,8 @@ export default function Footer() {
             <Image
               src="/logo.webp"
               alt="Szeko Ablak Kft"
-              width={783}
-              height={282}
+              width={900}
+              height={332}
               className="h-8 w-auto"
             />
             <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/50">

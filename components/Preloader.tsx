@@ -88,8 +88,8 @@ export default function Preloader() {
       <Image
         src="/logo.webp"
         alt="Szeko Ablak Kft"
-        width={783}
-        height={282}
+        width={900}
+        height={332}
         priority
         className="relative h-auto w-72 sm:w-[26rem]"
         style={{
