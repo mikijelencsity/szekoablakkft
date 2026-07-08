@@ -55,7 +55,7 @@ export default function Header() {
               className="flex items-center"
             >
               <Image
-                src="/logo-mark.webp"
+                src="/szeko-logo.webp"
                 alt="Szeko Ablak Kft"
                 width={900}
                 height={332}
