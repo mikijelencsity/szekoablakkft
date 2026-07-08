@@ -151,7 +151,7 @@ export default function ServicesSection() {
                 </p>
 
                 <Link
-                  href="#cta"
+                  href="#ajanlatkeres"
                   className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
                 >
                   Kérjen árajánlatot

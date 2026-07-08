@@ -145,9 +145,9 @@ export default function HeroSection() {
           </h1>
 
           <div ref={ctaRef} className="mt-9 flex flex-wrap items-center gap-5">
-            <Button href="#cta">Kérjen ingyenes árajánlatot</Button>
+            <Button href="#ajanlatkeres">Kérjen ingyenes árajánlatot</Button>
             <Link
-              href="#projects"
+              href="/referenciak"
               className="text-[15px] font-medium text-white underline-offset-4 [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] hover:underline"
             >
               Referenciák →

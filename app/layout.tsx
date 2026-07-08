@@ -4,6 +4,7 @@ import "./globals.css";
 import LenisProvider from "@/lib/lenis";
 import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
 
 const satoshi = Manrope({
@@ -24,12 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${satoshi.variable} h-full antialiased`}>
+    <html lang="hu" className={`${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-ink">
         <LenisProvider>
           <Preloader />
           <Header />
           {children}
+          <Footer />
           <PhoneButton />
         </LenisProvider>
       </body>

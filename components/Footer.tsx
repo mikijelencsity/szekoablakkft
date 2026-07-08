@@ -29,18 +29,18 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <p className="font-medium text-ink">Oldal</p>
-          <Link href="#services" className="hover:text-brand">
+          <p className="font-medium text-ink">Oldalak</p>
+          <Link href="/szolgaltatasok" className="hover:text-brand">
             Szolgáltatások
           </Link>
-          <Link href="#projects" className="hover:text-brand">
+          <Link href="/rolunk" className="hover:text-brand">
+            Rólunk
+          </Link>
+          <Link href="/referenciak" className="hover:text-brand">
             Referenciák
           </Link>
-          <Link href="#faq" className="hover:text-brand">
-            GYIK
-          </Link>
-          <Link href="#cta" className="hover:text-brand">
-            Kérjen árajánlatot
+          <Link href="/kapcsolat" className="hover:text-brand">
+            Kapcsolat
           </Link>
         </div>
       </div>

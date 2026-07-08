@@ -1,0 +1,98 @@
+import type { Metadata } from "next";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/Reveal";
+import QuoteForm from "@/components/QuoteForm";
+
+export const metadata: Metadata = {
+  title: "Kapcsolat | Szeko Ablak Kft",
+  description:
+    "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Hívjon minket, írjon e-mailt, vagy töltse ki az ajánlatkérő űrlapot.",
+};
+
+const U = (id: string, w = 2000) =>
+  `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
+
+const contacts = [
+  {
+    label: "Telefon",
+    value: "+36 00 000 0000",
+    href: "tel:+36000000000",
+    hint: "H–P 8:00–17:00",
+  },
+  {
+    label: "E-mail",
+    value: "info@szekoablak.hu",
+    href: "mailto:info@szekoablak.hu",
+    hint: "Válasz 1 munkanapon belül",
+  },
+  {
+    label: "Vállalási terület",
+    value: "Budapest és 45 km",
+    href: null,
+    hint: "Ingyenes helyszíni felmérés",
+  },
+];
+
+export default function KapcsolatPage() {
+  return (
+    <main className="flex flex-1 flex-col">
+      <PageHero
+        eyebrow="Kapcsolat"
+        title="Kérjen ingyenes árajánlatot"
+        subtitle="Töltse ki az űrlapot, vagy keressen minket telefonon — pár napon belül tételes ajánlattal jelentkezünk."
+        image={U("photo-1503387762-592deb58ef4e")}
+        crumbs={[
+          { label: "Főoldal", href: "/" },
+          { label: "Kapcsolat", href: "/kapcsolat" },
+        ]}
+      />
+
+      <section className="bg-white py-20 lg:py-28">
+        <div className="container-px grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
+          {/* Contact info */}
+          <Reveal>
+            <p className="text-sm font-medium uppercase tracking-wider text-brand">
+              Elérhetőségek
+            </p>
+            <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+              Beszéljük át a projektjét.
+            </h2>
+            <p className="mt-5 max-w-md leading-relaxed text-ink-soft">
+              Akár egyetlen ablakról, akár teljes felújításról van szó,
+              szívesen segítünk. A felmérés és az árajánlat mindig ingyenes és
+              kötelezettség nélküli.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4">
+              {contacts.map((c) => {
+                const inner = (
+                  <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-[0_16px_40px_-30px_rgba(17,23,32,0.35)] transition-colors hover:border-brand/30">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
+                      {c.label}
+                    </p>
+                    <p className="mt-1 text-lg font-semibold text-ink">
+                      {c.value}
+                    </p>
+                    <p className="mt-0.5 text-sm text-ink-soft">{c.hint}</p>
+                  </div>
+                );
+                return c.href ? (
+                  <a key={c.label} href={c.href} className="block">
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={c.label}>{inner}</div>
+                );
+              })}
+            </div>
+          </Reveal>
+
+          {/* Quote form */}
+          <Reveal delay={0.08} id="ajanlatkeres">
+            <QuoteForm />
+          </Reveal>
+        </div>
+      </section>
+    </main>
+  );
+}

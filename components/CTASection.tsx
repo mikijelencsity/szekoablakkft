@@ -43,7 +43,7 @@ export default function CTASection() {
           egy átlátható árajánlat.
         </p>
         <div className="mt-9 flex justify-center">
-          <Button href="#contact" variant="onDark">
+          <Button href="#ajanlatkeres" variant="onDark">
             Kérjen ingyenes árajánlatot
           </Button>
         </div>

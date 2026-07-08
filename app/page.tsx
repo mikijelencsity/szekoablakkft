@@ -6,7 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import HomeQuote from "@/components/HomeQuote";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
         <FAQSection />
       </div>
       <CTASection />
-      <Footer />
+      <HomeQuote />
     </main>
   );
 }

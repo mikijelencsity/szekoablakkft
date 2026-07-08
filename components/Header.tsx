@@ -6,10 +6,10 @@ import Image from "next/image";
 import { useLenis } from "@/lib/lenis";
 
 const NAV = [
-  { n: "01", label: "Szolgáltatások", href: "#services" },
-  { n: "02", label: "Referenciák", href: "#projects" },
-  { n: "03", label: "GYIK", href: "#faq" },
-  { n: "04", label: "Kapcsolat", href: "#contact" },
+  { n: "01", label: "Szolgáltatások", href: "/szolgaltatasok" },
+  { n: "02", label: "Rólunk", href: "/rolunk" },
+  { n: "03", label: "Referenciák", href: "/referenciak" },
+  { n: "04", label: "Kapcsolat", href: "/kapcsolat" },
 ];
 
 export default function Header() {
@@ -50,7 +50,7 @@ export default function Header() {
             }`}
           >
             <Link
-              href="#top"
+              href="/"
               aria-label="Szeko Ablak Kft"
               className="flex items-center"
             >
@@ -77,7 +77,7 @@ export default function Header() {
             </nav>
 
             <Link
-              href="#cta"
+              href="/kapcsolat"
               className="hidden rounded-full bg-brand px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-dark lg:inline-flex"
             >
               Árajánlat
@@ -180,7 +180,7 @@ export default function Header() {
               </span>
             </div>
             <Link
-              href="#cta"
+              href="/kapcsolat"
               onClick={() => setOpen(false)}
               className="inline-flex w-full items-center justify-center rounded-full bg-brand px-5 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-brand-dark"
             >
