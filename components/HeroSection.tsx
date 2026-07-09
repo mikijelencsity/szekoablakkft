@@ -3,7 +3,6 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 import { gsap } from "@/lib/gsap";
 
 // Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
@@ -203,13 +202,30 @@ export default function HeroSection() {
             ))}
           </h1>
 
-          <div ref={ctaRef} className="mt-9 flex flex-wrap items-center gap-5">
-            <Button href="#ajanlatkeres">Kérjen ingyenes árajánlatot</Button>
+          <div ref={ctaRef} className="mt-9 flex flex-wrap items-center gap-3.5">
+            <Link
+              href="#ajanlatkeres"
+              className="group inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_12px_34px_-8px_rgba(36,87,255,0.6)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-brand-dark"
+            >
+              Kérjen ingyenes árajánlatot
+              <span
+                aria-hidden
+                className="transition-transform duration-300 ease-out group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </Link>
             <Link
               href="/referenciak"
-              className="text-[15px] font-medium text-white underline-offset-4 [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] hover:underline"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-[15px] font-semibold text-white backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/20"
             >
-              Referenciák →
+              Referenciák
+              <span
+                aria-hidden
+                className="transition-transform duration-300 ease-out group-hover:translate-x-1"
+              >
+                →
+              </span>
             </Link>
           </div>
         </div>
