@@ -108,21 +108,26 @@ export const categories: RefCategory[] = [
     "images": [
       {
         "src": "/referenciak/redony/01.webp",
-        "w": 1600,
-        "h": 1200
+        "w": 640,
+        "h": 480
       },
       {
         "src": "/referenciak/redony/02.webp",
         "w": 1600,
-        "h": 720
+        "h": 1200
       },
       {
         "src": "/referenciak/redony/03.webp",
+        "w": 1600,
+        "h": 720
+      },
+      {
+        "src": "/referenciak/redony/04.webp",
         "w": 1200,
         "h": 1600
       },
       {
-        "src": "/referenciak/redony/04.webp",
+        "src": "/referenciak/redony/05.webp",
         "w": 1200,
         "h": 1600
       }
