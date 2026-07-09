@@ -1,15 +1,10 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 
 // Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
-// Laptopon a látványos oromfal-üvegezés fotó; mobilon geometriai
-// márka-háttér (fotó nélkül) — lásd a háttér-blokkot lentebb.
-const HERO_DESKTOP = "/referenciak/ablak/13.webp";
-
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
 
 const icon = (paths: ReactNode) => (
@@ -160,9 +155,9 @@ export default function HeroSection() {
         ref={parallaxRef}
         className="absolute inset-0 -top-[6%] h-[112%] w-full"
       >
-        {/* Mobil: blueprint-rács + reflektorfény (fotó nélkül) */}
+        {/* Blueprint-rács + reflektorfény (fotó nélkül) — mobil + gép */}
         <div
-          className="absolute inset-0 overflow-hidden lg:hidden"
+          className="absolute inset-0 overflow-hidden"
           style={{
             background:
               "radial-gradient(120% 70% at 50% 0%, #16255a, #0a1428 60%)",
@@ -189,17 +184,6 @@ export default function HeroSection() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1428] via-transparent to-transparent" />
         </div>
-
-        {/* Laptop: fotó */}
-        <Image
-          src={HERO_DESKTOP}
-          alt="Modern otthon nagy ablakokkal"
-          fill
-          className="hidden object-cover object-center lg:block"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 hidden bg-[linear-gradient(180deg,rgba(6,9,14,0.46)_0%,rgba(6,9,14,0.24)_30%,rgba(6,9,14,0.28)_54%,rgba(6,9,14,0.58)_80%,rgba(6,9,14,0.9)_100%)] lg:block" />
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-black/45 via-black/10 to-transparent lg:block" />
       </div>
 
       {/* Body */}
