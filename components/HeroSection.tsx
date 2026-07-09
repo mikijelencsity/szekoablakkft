@@ -6,7 +6,9 @@ import Link from "next/link";
 import Button from "./Button";
 import { gsap } from "@/lib/gsap";
 
-const HERO_IMAGE = "/referenciak/ablak/09.webp";
+// Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
+const HERO_MOBILE = "/referenciak/ablak/06.webp";
+const HERO_DESKTOP = "/referenciak/ablak/13.webp";
 
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
 
@@ -108,11 +110,17 @@ export default function HeroSection() {
         className="absolute inset-0 -top-[6%] h-[112%] w-full"
       >
         <Image
-          src={HERO_IMAGE}
+          src={HERO_MOBILE}
           alt="Modern otthon nagy ablakokkal"
           fill
-          priority
-          className="object-cover"
+          className="object-cover object-center lg:hidden"
+          sizes="100vw"
+        />
+        <Image
+          src={HERO_DESKTOP}
+          alt=""
+          fill
+          className="hidden object-cover object-center lg:block"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.72)_0%,rgba(6,9,14,0.5)_28%,rgba(6,9,14,0.5)_52%,rgba(6,9,14,0.72)_78%,rgba(6,9,14,0.96)_100%)]" />
