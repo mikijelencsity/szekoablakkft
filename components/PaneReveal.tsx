@@ -113,10 +113,15 @@ export default function PaneReveal() {
           </p>
           <a
             href="#projects"
-            className="mt-7 inline-flex items-center gap-2 text-[15px] font-medium text-white underline-offset-4 hover:underline"
+            className="group mt-8 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-[15px] font-semibold text-white backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-white/50 hover:bg-white/20"
           >
             Nézze meg a projekteket
-            <span aria-hidden>→</span>
+            <span
+              aria-hidden
+              className="transition-transform duration-300 ease-out group-hover:translate-x-1"
+            >
+              →
+            </span>
           </a>
         </div>
       </div>
