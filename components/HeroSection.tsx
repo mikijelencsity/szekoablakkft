@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
@@ -12,11 +12,62 @@ const HERO_DESKTOP = "/referenciak/ablak/13.webp";
 
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
 
+const icon = (paths: ReactNode) => (
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    {paths}
+  </svg>
+);
+
 const CREDENTIALS = [
-  { value: "2007", label: "Alapítva" },
-  { value: "640+", label: "Befejezett projekt" },
-  { value: "18+ év", label: "Tapasztalat" },
-  { value: "Teljes körű", label: "Garancia" },
+  {
+    value: "2007",
+    label: "Alapítva",
+    icon: icon(
+      <>
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+        <line x1="4" y1="22" x2="4" y2="15" />
+      </>
+    ),
+  },
+  {
+    value: "640+",
+    label: "Befejezett projekt",
+    icon: icon(
+      <>
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <path d="M22 4 12 14.01l-3-3" />
+      </>
+    ),
+  },
+  {
+    value: "18+ év",
+    label: "Tapasztalat",
+    icon: icon(
+      <>
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </>
+    ),
+  },
+  {
+    value: "Teljes körű",
+    label: "Garancia",
+    icon: icon(
+      <>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 12 2 2 4-4" />
+      </>
+    ),
+  },
 ];
 
 export default function HeroSection() {
@@ -167,16 +218,23 @@ export default function HeroSection() {
       {/* Credential bar */}
       <div
         ref={barRef}
-        className="container-px relative z-10 grid grid-cols-2 gap-y-6 pb-28 sm:grid-cols-4 sm:gap-y-0 sm:pb-24"
+        className="container-px relative z-10 grid grid-cols-2 gap-3 pb-28 sm:grid-cols-4 sm:gap-4 sm:pb-24"
       >
         {CREDENTIALS.map((c) => (
-          <div key={c.label} className="px-1 sm:px-4">
-            <span className="mb-3 block h-[3px] w-8 rounded-full bg-brand" />
-            <div className="text-2xl font-bold tabular-nums text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] lg:text-3xl">
-              {c.value}
-            </div>
-            <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.06em] text-white/85 [text-shadow:0_1px_8px_rgba(0,0,0,0.7)] sm:text-xs">
-              {c.label}
+          <div
+            key={c.label}
+            className="flex flex-col gap-3 rounded-xl border border-white/15 bg-white/[0.07] p-4 backdrop-blur-md transition-colors hover:border-white/30 sm:p-5"
+          >
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand/25 text-white">
+              {c.icon}
+            </span>
+            <div>
+              <div className="text-2xl font-bold tabular-nums leading-none text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] lg:text-3xl">
+                {c.value}
+              </div>
+              <div className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.06em] text-white/85 [text-shadow:0_1px_8px_rgba(0,0,0,0.7)] sm:text-xs">
+                {c.label}
+              </div>
             </div>
           </div>
         ))}
