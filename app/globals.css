@@ -70,6 +70,30 @@ body {
   }
 }
 
+/* Service cards — aurora glow drifting behind the frosted glass */
+@keyframes svcaur1 {
+  to {
+    transform: translate(-16%, 14%) scale(1.12);
+  }
+}
+@keyframes svcaur2 {
+  to {
+    transform: translate(12%, -12%) scale(1.15);
+  }
+}
+.svc-aur1 {
+  animation: svcaur1 12s ease-in-out infinite alternate;
+}
+.svc-aur2 {
+  animation: svcaur2 15s ease-in-out infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .svc-aur1,
+  .svc-aur2 {
+    animation: none;
+  }
+}
+
 /* Services heading — pulsing eyebrow dot */
 @keyframes dotpulse {
   0%,

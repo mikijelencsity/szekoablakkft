@@ -98,7 +98,10 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white py-24 lg:py-32">
+    <section
+      ref={sectionRef}
+      className="bg-gradient-to-b from-[#eef3ff] via-[#f6f8ff] to-white py-24 lg:py-32"
+    >
       <div
         ref={headRef}
         className="container-px mx-auto mb-16 max-w-3xl text-center lg:mb-24"
@@ -160,12 +163,20 @@ export default function ServicesSection() {
                   )}
                 </div>
 
-                {/* Overlapping editorial card */}
+                {/* Overlapping editorial card — aurora glass */}
                 <div
-                  className={`relative z-10 rounded-2xl border border-black/5 bg-white p-7 shadow-[0_30px_60px_-30px_rgba(17,23,32,0.32)] lg:p-9 ${
+                  className={`relative z-10 ${
                     isAlt ? "lg:order-1 lg:-mr-16" : "lg:-ml-16"
                   }`}
                 >
+                  {/* Aurora glow behind the frosted glass */}
+                  <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+                    <span className="svc-aur1 absolute left-[42%] top-[-12%] h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(111,155,255,0.55),transparent_65%)] blur-2xl" />
+                    <span className="svc-aur2 absolute left-[58%] top-[34%] h-52 w-52 rounded-full bg-[radial-gradient(circle,rgba(157,123,255,0.5),transparent_65%)] blur-2xl" />
+                  </div>
+
+                  {/* Frosted glass card */}
+                  <div className="relative rounded-2xl border border-white/60 bg-white/55 p-7 shadow-[0_30px_60px_-30px_rgba(17,23,32,0.42),inset_0_1px_0_rgba(255,255,255,0.6)] backdrop-blur-xl lg:p-9">
                   <h3 className="text-2xl font-semibold tracking-tight text-ink">
                     {service.name}
                   </h3>
@@ -203,6 +214,7 @@ export default function ServicesSection() {
                       ))}
                     </div>
                   )}
+                  </div>
                 </div>
               </div>
             </div>
