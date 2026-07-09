@@ -98,16 +98,16 @@ export default function PaneReveal() {
         <div className="absolute left-0 top-1/2 h-[3px] w-full bg-gradient-to-b from-black/60 via-white/10 to-black/60" />
       </div>
 
-      <div className="absolute inset-0 z-10 flex items-center">
-        <div ref={copyRef} className="container-px max-w-2xl">
-          <div className="mb-4 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-white/75">
+      <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div ref={copyRef} className="container-px mx-auto max-w-2xl text-center">
+          <div className="mb-4 flex items-center justify-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-white/75">
             <span className="h-px w-8 bg-brand" />
             Munkáink
           </div>
           <h2 className="text-3xl font-semibold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-5xl [text-shadow:0_2px_30px_rgba(0,0,0,0.55)]">
             Nyissunk ablakot a minőségre.
           </h2>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-white/85 [text-shadow:0_1px_16px_rgba(0,0,0,0.5)]">
+          <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-white/85 [text-shadow:0_1px_16px_rgba(0,0,0,0.5)]">
             Nézze meg, hogyan alakítjuk át a valódi otthonokat — tiszta
             munkával, pontos kivitelezéssel.
           </p>

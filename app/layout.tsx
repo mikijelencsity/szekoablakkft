@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/lib/lenis";
 import Preloader from "@/components/Preloader";
+import ScrollToTop from "@/components/ScrollToTop";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="hu" className={`${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-ink">
         <LenisProvider>
+          <ScrollToTop />
           <Preloader />
           <Header />
           {children}
