@@ -51,7 +51,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="angle-top bg-white py-24 lg:py-32">
+    <section ref={sectionRef} className="bg-white py-24 lg:py-32">
       <div className="container-px mb-14 flex flex-wrap items-end justify-between gap-4 lg:mb-20">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-brand">
