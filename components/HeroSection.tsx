@@ -132,9 +132,10 @@ export default function HeroSection() {
         <div className="max-w-2xl pb-14 lg:pb-20">
           <div
             ref={eyebrowRef}
-            className="mb-5 text-xs font-medium uppercase tracking-[0.18em] text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.7)]"
+            className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-white [text-shadow:0_1px_12px_rgba(0,0,0,0.7)] sm:text-[15px]"
           >
-            Ablak · Redőny · Felújítás — Alapítva 2007
+            <span className="h-0.5 w-8 rounded-full bg-brand" />
+            Ablak · Redőny · Felújítás — 2007 óta
           </div>
 
           <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem] [text-shadow:0_2px_18px_rgba(0,0,0,0.75),0_1px_3px_rgba(0,0,0,0.5)]">
@@ -169,14 +170,12 @@ export default function HeroSection() {
         className="container-px relative z-10 grid grid-cols-2 gap-y-6 pb-28 sm:grid-cols-4 sm:gap-y-0 sm:pb-24"
       >
         {CREDENTIALS.map((c) => (
-          <div
-            key={c.label}
-            className="border-t border-white/25 px-1 pt-4 sm:px-4"
-          >
-            <div className="text-base font-bold tabular-nums text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] lg:text-lg">
+          <div key={c.label} className="px-1 sm:px-4">
+            <span className="mb-3 block h-[3px] w-8 rounded-full bg-brand" />
+            <div className="text-2xl font-bold tabular-nums text-white [text-shadow:0_1px_10px_rgba(0,0,0,0.7)] lg:text-3xl">
               {c.value}
             </div>
-            <div className="mt-0.5 font-mono text-[10px] uppercase tracking-[0.05em] text-white/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.7)]">
+            <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.06em] text-white/85 [text-shadow:0_1px_8px_rgba(0,0,0,0.7)] sm:text-xs">
               {c.label}
             </div>
           </div>
