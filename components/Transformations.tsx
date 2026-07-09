@@ -74,10 +74,11 @@ export default function Transformations({ limit }: { limit?: number }) {
                 )}
               </div>
 
-              <div className="grid items-center gap-6 lg:grid-cols-[1fr_auto_1fr] lg:gap-8">
-                {/* Előtte */}
-                <div>
-                  <span className="mb-3 inline-block rounded-full bg-black/5 px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-ink-soft">
+              <div className="grid items-stretch gap-5 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
+                {/* Előtte kártya */}
+                <div className="rounded-2xl bg-white p-4 shadow-[0_24px_50px_-34px_rgba(20,30,50,0.45)] sm:p-5">
+                  <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-black/[0.06] px-3.5 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-soft">
+                    <span className="h-1.5 w-1.5 rounded-full bg-ink-soft/50" />
                     Előtte
                   </span>
                   <Gallery
@@ -87,24 +88,27 @@ export default function Transformations({ limit }: { limit?: number }) {
                 </div>
 
                 {/* Nyíl */}
-                <div className="mx-auto flex h-12 w-12 shrink-0 rotate-90 items-center justify-center rounded-full border border-black/10 bg-white text-brand shadow-[0_12px_30px_-14px_rgba(36,87,255,0.5)] lg:rotate-0">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
+                <div className="flex items-center justify-center py-1">
+                  <div className="flex h-14 w-14 rotate-90 items-center justify-center rounded-full bg-brand text-white shadow-[0_18px_40px_-12px_rgba(36,87,255,0.75)] lg:h-20 lg:w-20 lg:rotate-0">
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M4 12h15M13 6l6 6-6 6" />
+                    </svg>
+                  </div>
                 </div>
 
-                {/* Utána */}
-                <div>
-                  <span className="mb-3 inline-block rounded-full bg-brand px-3 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-white">
+                {/* Utána kártya */}
+                <div className="rounded-2xl bg-white p-4 shadow-[0_24px_50px_-34px_rgba(36,87,255,0.4)] ring-1 ring-brand/15 sm:p-5">
+                  <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand px-3.5 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+                    <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
                     Utána
                   </span>
                   <Gallery images={p.after} onOpen={(i) => open(p.after, i)} />
