@@ -6,7 +6,7 @@ import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 
 // Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
-const HERO_MOBILE = "/referenciak/ablak/06.webp";
+const HERO_MOBILE = "/referenciak/ablak/04.webp";
 const HERO_DESKTOP = "/referenciak/ablak/13.webp";
 
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
@@ -173,8 +173,8 @@ export default function HeroSection() {
           className="hidden object-cover object-center lg:block"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.72)_0%,rgba(6,9,14,0.5)_28%,rgba(6,9,14,0.5)_52%,rgba(6,9,14,0.72)_78%,rgba(6,9,14,0.96)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.46)_0%,rgba(6,9,14,0.24)_30%,rgba(6,9,14,0.28)_54%,rgba(6,9,14,0.58)_80%,rgba(6,9,14,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
       </div>
 
       {/* Body */}
