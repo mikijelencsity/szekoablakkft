@@ -160,34 +160,34 @@ export default function HeroSection() {
         ref={parallaxRef}
         className="absolute inset-0 -top-[6%] h-[112%] w-full"
       >
-        {/* Mobil: geometriai márka-háttér (fotó nélkül) */}
+        {/* Mobil: blueprint-rács + reflektorfény (fotó nélkül) */}
         <div
-          className="absolute inset-0 overflow-hidden bg-[#0a1330] lg:hidden"
+          className="absolute inset-0 overflow-hidden lg:hidden"
+          style={{
+            background:
+              "radial-gradient(120% 70% at 50% 0%, #16255a, #0a1428 60%)",
+          }}
           aria-hidden
         >
           <div
-            className="absolute inset-0 bg-gradient-to-br from-brand to-[#153bb0]"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 34%, 0 52%)" }}
-          />
-          <div
-            className="absolute inset-0 bg-[#0f1c48]/90"
-            style={{ clipPath: "polygon(0 52%, 100% 34%, 100% 60%, 0 74%)" }}
+            className="absolute inset-0 opacity-55"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(0deg, rgba(120,160,255,0.14) 0 1px, transparent 1px 30px), repeating-linear-gradient(90deg, rgba(120,160,255,0.14) 0 1px, transparent 1px 30px)",
+              WebkitMaskImage:
+                "radial-gradient(95% 62% at 50% 30%, #000, transparent 82%)",
+              maskImage:
+                "radial-gradient(95% 62% at 50% 30%, #000, transparent 82%)",
+            }}
           />
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(60% 40% at 80% 20%, rgba(0,180,255,0.42), transparent 60%)",
+                "radial-gradient(72% 46% at 50% 3%, rgba(50,100,255,0.5), transparent 60%)",
             }}
           />
-          <div
-            className="absolute inset-0 opacity-[0.09] mix-blend-overlay"
-            style={{
-              backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1330] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1428] via-transparent to-transparent" />
         </div>
 
         {/* Laptop: fotó */}
