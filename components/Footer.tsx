@@ -53,10 +53,16 @@ export default function Footer() {
               Kérjen ingyenes árajánlatot
             </Link>
             <a
-              href="tel:+36000000000"
+              href="tel:+36202191858"
               className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-white/10"
             >
-              +36 00 000 0000
+              06 20 219 1858
+            </a>
+            <a
+              href="tel:+36202194514"
+              className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-white/10"
+            >
+              06 20 219 4514
             </a>
           </div>
         </div>
@@ -96,16 +102,22 @@ export default function Footer() {
               Elérhetőség
             </p>
             <a
-              href="tel:+36000000000"
+              href="tel:+36202191858"
               className="block py-1 text-white/80 transition-colors hover:text-white"
             >
-              +36 00 000 0000
+              06 20 219 1858
             </a>
             <a
-              href="mailto:info@szekoablak.hu"
+              href="tel:+36202194514"
               className="block py-1 text-white/80 transition-colors hover:text-white"
             >
-              info@szekoablak.hu
+              06 20 219 4514
+            </a>
+            <a
+              href="mailto:szeko2010@gmail.com"
+              className="block py-1 text-white/80 transition-colors hover:text-white"
+            >
+              szeko2010@gmail.com
             </a>
             <p className="py-1 text-white/80">H–P 8:00–17:00</p>
           </div>

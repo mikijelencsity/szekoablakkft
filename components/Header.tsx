@@ -169,11 +169,14 @@ export default function Header() {
             }}
           >
             <div className="flex flex-col gap-1 text-sm text-white/70">
-              <a href="tel:+36000000000" className="hover:text-white">
-                +36 00 000 0000
+              <a href="tel:+36202191858" className="hover:text-white">
+                06 20 219 1858
               </a>
-              <a href="mailto:info@szekoablak.hu" className="hover:text-white">
-                info@szekoablak.hu
+              <a href="tel:+36202194514" className="hover:text-white">
+                06 20 219 4514
+              </a>
+              <a href="mailto:szeko2010@gmail.com" className="hover:text-white">
+                szeko2010@gmail.com
               </a>
               <span className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-white/40">
                 H–P 8:00–17:00 · Budapest &amp; 45 km

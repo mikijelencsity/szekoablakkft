@@ -23,10 +23,16 @@ export default function PageCTA({
             Kérjen ingyenes árajánlatot
           </Link>
           <a
-            href="tel:+36000000000"
+            href="tel:+36202191858"
             className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-white/10"
           >
-            +36 00 000 0000
+            06 20 219 1858
+          </a>
+          <a
+            href="tel:+36202194514"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-white/10"
+          >
+            06 20 219 4514
           </a>
         </div>
       </Reveal>

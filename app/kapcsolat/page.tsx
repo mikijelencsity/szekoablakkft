@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 const contacts = [
   {
     label: "Telefon",
-    value: "+36 00 000 0000",
-    href: "tel:+36000000000",
+    links: [
+      { value: "06 20 219 1858", href: "tel:+36202191858" },
+      { value: "06 20 219 4514", href: "tel:+36202194514" },
+    ],
     hint: "H–P 8:00–17:00",
   },
   {
     label: "E-mail",
-    value: "info@szekoablak.hu",
-    href: "mailto:info@szekoablak.hu",
+    links: [{ value: "szeko2010@gmail.com", href: "mailto:szeko2010@gmail.com" }],
     hint: "Válasz 1 munkanapon belül",
   },
   {
     label: "Vállalási terület",
-    value: "Budapest és 45 km",
-    href: null,
+    links: [{ value: "Budapest és 45 km", href: null }],
     hint: "Ingyenes helyszíni felmérés",
   },
 ];
@@ -61,26 +61,37 @@ export default function KapcsolatPage() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4">
-              {contacts.map((c) => {
-                const inner = (
-                  <div className="rounded-2xl border border-black/5 bg-white p-5 shadow-[0_16px_40px_-30px_rgba(17,23,32,0.35)] transition-colors hover:border-brand/30">
-                    <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
-                      {c.label}
-                    </p>
-                    <p className="mt-1 text-lg font-semibold text-ink">
-                      {c.value}
-                    </p>
-                    <p className="mt-0.5 text-sm text-ink-soft">{c.hint}</p>
+              {contacts.map((c) => (
+                <div
+                  key={c.label}
+                  className="rounded-2xl border border-black/5 bg-white p-5 shadow-[0_16px_40px_-30px_rgba(17,23,32,0.35)] transition-colors hover:border-brand/30"
+                >
+                  <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
+                    {c.label}
+                  </p>
+                  <div className="mt-1 flex flex-col gap-0.5">
+                    {c.links.map((l) =>
+                      l.href ? (
+                        <a
+                          key={l.value}
+                          href={l.href}
+                          className="text-lg font-semibold text-ink transition-colors hover:text-brand"
+                        >
+                          {l.value}
+                        </a>
+                      ) : (
+                        <span
+                          key={l.value}
+                          className="text-lg font-semibold text-ink"
+                        >
+                          {l.value}
+                        </span>
+                      )
+                    )}
                   </div>
-                );
-                return c.href ? (
-                  <a key={c.label} href={c.href} className="block">
-                    {inner}
-                  </a>
-                ) : (
-                  <div key={c.label}>{inner}</div>
-                );
-              })}
+                  <p className="mt-1 text-sm text-ink-soft">{c.hint}</p>
+                </div>
+              ))}
             </div>
           </Reveal>
 
