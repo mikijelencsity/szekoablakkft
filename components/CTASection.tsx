@@ -32,17 +32,25 @@ export default function CTASection() {
     <section
       id="cta"
       ref={sectionRef}
-      className="angle-top bg-surface-dark py-28 text-center text-white lg:py-36"
+      className="angle-top relative overflow-hidden bg-surface-dark py-32 text-center text-white lg:py-40"
     >
-      <div className="cta-content container-px mx-auto max-w-xl">
-        <h2 className="text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
+      {/* Extra background — spotlight + drifting aurora + blueprint grid */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 opacity-60 [background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.05)_0_1px,transparent_1px_34px),repeating-linear-gradient(90deg,rgba(255,255,255,0.05)_0_1px,transparent_1px_34px)] [mask-image:radial-gradient(circle_at_50%_42%,#000,transparent_72%)]" />
+        <div className="absolute left-1/2 top-[-10%] h-[70%] w-[85%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(36,87,255,0.30),transparent_62%)] blur-3xl" />
+        <div className="aurora-1 absolute left-[12%] top-[24%] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(36,87,255,0.38),transparent_65%)] blur-3xl" />
+        <div className="aurora-2 absolute right-[10%] bottom-[8%] h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(94,124,255,0.30),transparent_65%)] blur-3xl" />
+      </div>
+
+      <div className="cta-content container-px relative z-10 mx-auto max-w-2xl">
+        <h2 className="text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           Tegyük szebbé az otthonát.
         </h2>
-        <p className="mt-4 text-white/70">
+        <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/75 lg:text-xl">
           Ingyenes, kötelezettség nélküli helyszíni felmérés. Semmi nyomás, csak
           egy átlátható árajánlat.
         </p>
-        <div className="mt-9 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <Button href="#ajanlatkeres" variant="onDark">
             Kérjen ingyenes árajánlatot
           </Button>
