@@ -68,7 +68,7 @@ export default function Lightbox({
               e.stopPropagation();
               go(-1);
             }}
-            className={`absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 sm:flex ${arrow}`}
+            className={`absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 lg:flex ${arrow}`}
             aria-label="Előző"
           >
             ‹
@@ -79,7 +79,7 @@ export default function Lightbox({
               e.stopPropagation();
               go(1);
             }}
-            className={`absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 sm:flex ${arrow}`}
+            className={`absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 lg:flex ${arrow}`}
             aria-label="Következő"
           >
             ›
@@ -89,7 +89,7 @@ export default function Lightbox({
 
       {/* Image — swipeable on touch */}
       <div
-        className="relative flex max-h-[78vh] max-w-[94vw] items-center justify-center sm:max-h-[86vh] sm:max-w-[92vw]"
+        className="relative flex max-h-[80vh] max-w-[94vw] items-center justify-center sm:max-w-[92vw]"
         onClick={(e) => e.stopPropagation()}
         onTouchStart={(e) => {
           touchX.current = e.touches[0].clientX;
@@ -106,7 +106,7 @@ export default function Lightbox({
           alt=""
           width={images[index].w}
           height={images[index].h}
-          className="max-h-[78vh] w-auto rounded-lg object-contain sm:max-h-[86vh]"
+          className="max-h-[80vh] w-auto rounded-lg object-contain"
           sizes="94vw"
           priority
         />
@@ -121,7 +121,7 @@ export default function Lightbox({
           <button
             type="button"
             onClick={() => go(-1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25 sm:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25"
             aria-label="Előző"
           >
             ‹
@@ -132,7 +132,7 @@ export default function Lightbox({
           <button
             type="button"
             onClick={() => go(1)}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25 sm:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25"
             aria-label="Következő"
           >
             ›

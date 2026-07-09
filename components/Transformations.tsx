@@ -15,20 +15,21 @@ function Gallery({
   onOpen: (i: number) => void;
 }) {
   return (
-    <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
+    <div className="columns-2 gap-2.5 sm:gap-3">
       {images.map((img, i) => (
         <button
           key={img.src}
           type="button"
           onClick={() => onOpen(i)}
-          className="group relative aspect-[4/3] cursor-zoom-in overflow-hidden rounded-xl bg-black/5 shadow-[0_18px_40px_-28px_rgba(20,30,50,0.5)]"
+          className="group mb-2.5 block w-full cursor-zoom-in overflow-hidden rounded-xl sm:mb-3"
           aria-label="Kép megnyitása"
         >
           <Image
             src={img.src}
             alt=""
-            fill
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+            width={img.w}
+            height={img.h}
+            className="h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
             sizes="(min-width: 1024px) 22vw, 44vw"
           />
         </button>
@@ -74,7 +75,7 @@ export default function Transformations({ limit }: { limit?: number }) {
                 )}
               </div>
 
-              <div className="grid items-stretch gap-5 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
+              <div className="grid items-start gap-5 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
                 {/* Előtte kártya */}
                 <div className="rounded-2xl bg-white p-4 shadow-[0_24px_50px_-34px_rgba(20,30,50,0.45)] sm:p-5">
                   <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-black/[0.06] px-3.5 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-soft">
@@ -88,7 +89,7 @@ export default function Transformations({ limit }: { limit?: number }) {
                 </div>
 
                 {/* Nyíl */}
-                <div className="flex items-center justify-center py-1">
+                <div className="flex items-center justify-center self-center py-1">
                   <div className="flex h-14 w-14 rotate-90 items-center justify-center rounded-full bg-brand text-white shadow-[0_18px_40px_-12px_rgba(36,87,255,0.75)] lg:h-20 lg:w-20 lg:rotate-0">
                     <svg
                       width="34"
