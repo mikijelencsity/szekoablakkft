@@ -51,7 +51,6 @@ const services: Service[] = [
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const headRef = useRef<HTMLDivElement>(null);
-  const strokeRef = useRef<SVGPathElement>(null);
   const [lbImages, setLbImages] = useState<RefImage[]>([]);
   const [lbIndex, setLbIndex] = useState<number | null>(null);
 
@@ -72,17 +71,6 @@ export default function ServicesSection() {
           stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: { trigger: head, start: "top 82%" },
-        });
-      }
-      const stroke = strokeRef.current;
-      if (stroke) {
-        const len = stroke.getTotalLength();
-        gsap.set(stroke, { strokeDasharray: len, strokeDashoffset: len });
-        gsap.to(stroke, {
-          strokeDashoffset: 0,
-          duration: 1.1,
-          ease: "power2.out",
-          scrollTrigger: { trigger: head, start: "top 76%" },
         });
       }
 
@@ -120,26 +108,7 @@ export default function ServicesSection() {
           Amit csinálunk
         </span>
         <h2 className="he-fx mx-auto mt-6 max-w-2xl text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl sm:leading-[1.05] lg:text-6xl">
-          Öt szolgáltatás,
-          <br />
-          <span className="relative inline-block">
-            egy megbízható csapat.
-            <svg
-              className="pointer-events-none absolute -bottom-2 left-[-2%] h-[0.42em] w-[104%] overflow-visible"
-              viewBox="0 0 400 18"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                ref={strokeRef}
-                d="M4 12 C 90 4, 300 4, 396 10"
-                stroke="var(--brand-blue)"
-                strokeWidth="4"
-                fill="none"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+          Öt szolgáltatás, egy megbízható csapat.
         </h2>
       </div>
 
