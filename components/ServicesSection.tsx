@@ -26,7 +26,7 @@ const services: Service[] = [
     n: "02",
     name: "Redőnyök",
     cat: "redony",
-    desc: "Automata és hagyományos redőnyök a biztonságért, fényszabályozásért és a nyári hővédelemért — okos vezérléssel.",
+    desc: "Redőnyök a biztonságért, fényszabályozásért és a nyári hővédelemért.",
   },
   {
     n: "03",

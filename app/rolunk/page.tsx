@@ -55,15 +55,16 @@ export default function RolunkPage() {
 
       {/* Story */}
       <section className="bg-white py-20 lg:py-28">
-        <div className="container-px grid gap-12 lg:grid-cols-2 lg:gap-20">
-          <Reveal>
-            <p className="text-sm font-medium uppercase tracking-wider text-brand">
+        <div className="container-px grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="flex flex-col justify-center">
+            <p className="flex items-center gap-3 text-sm font-medium uppercase tracking-wider text-brand">
+              <span className="h-px w-8 bg-brand" />
               A történetünk
             </p>
-            <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+            <h2 className="mt-5 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
               Kis csapatból megbízható partnerré.
             </h2>
-            <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-ink-soft">
+            <div className="mt-6 flex flex-col gap-4 leading-relaxed text-ink-soft">
               <p>
                 A Szeko Ablak Kft. 2007 óta végez ablakcserét, redőny- és
                 felújítási munkákat a régió otthonaiban. A kezdetek óta ugyanaz
@@ -73,18 +74,37 @@ export default function RolunkPage() {
               <p>
                 Több mint 640 befejezett projekt tapasztalatával tudjuk, hogy
                 egy jó munka nem a bontással kezdődik, hanem az őszinte
-                tanácsadással és a pontos felméréssel. Ezért minden projekt egy
-                ingyenes helyszíni felméréssel és egy tételes, átlátható
-                árajánlattal indul.
-              </p>
-              <p>
-                A célunk egyszerű: az otthona modernebb, kényelmesebb és
-                értékesebb legyen — stressz nélkül, tiszta munkával.
+                tanácsadással és a pontos felméréssel.
               </p>
             </div>
+
+            <ul className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-6">
+              {[
+                "Ugyanaz a törzscsapat 2007 óta",
+                "Ingyenes, kötelezettség nélküli felmérés",
+                "Tételes, átlátható árajánlat — rejtett költségek nélkül",
+              ].map((pt) => (
+                <li key={pt} className="flex items-center gap-3 text-ink">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="var(--brand-blue)"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="shrink-0"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                  <span className="text-[15px] font-medium">{pt}</span>
+                </li>
+              ))}
+            </ul>
           </Reveal>
 
-          <Reveal className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)]">
+          <Reveal className="relative min-h-[360px] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)] lg:min-h-0">
             <Image
               src="/referenciak/ablak/06.webp"
               alt="Szeko Ablak Kft munka"
@@ -92,6 +112,12 @@ export default function RolunkPage() {
               className="object-cover"
               sizes="(min-width: 1024px) 45vw, 100vw"
             />
+            <div className="absolute bottom-4 left-4 rounded-xl bg-brand px-5 py-3.5 text-white shadow-[0_16px_36px_-12px_rgba(36,87,255,0.6)]">
+              <div className="text-2xl font-bold leading-none">18+ év</div>
+              <p className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-white/85">
+                tapasztalat
+              </p>
+            </div>
           </Reveal>
         </div>
       </section>

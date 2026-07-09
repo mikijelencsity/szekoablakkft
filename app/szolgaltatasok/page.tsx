@@ -26,12 +26,11 @@ const services = [
   {
     n: "02",
     name: "Redőnyök",
-    desc: "Automata és hagyományos redőnyök a biztonságért, a fényszabályozásért és a nyári hővédelemért — okos vezérléssel.",
+    desc: "Redőnyök a biztonságért, a fényszabályozásért és a nyári hővédelemért.",
     features: [
       "Motoros és távvezérelt megoldások",
       "Alumínium és műanyag lamellák",
       "Szúnyogháló és árnyékolás",
-      "Okosotthon-integráció",
     ],
     image: "/referenciak/redony/01.webp",
   },
