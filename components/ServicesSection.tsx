@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 import { catImages } from "@/lib/kepek";
+import type { RefImage } from "@/lib/referenciak";
+import Lightbox from "./Lightbox";
 
 type Service = {
   n: string;
@@ -48,6 +50,13 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [lbImages, setLbImages] = useState<RefImage[]>([]);
+  const [lbIndex, setLbIndex] = useState<number | null>(null);
+
+  const openLb = (imgs: RefImage[], i: number) => {
+    setLbImages(imgs);
+    setLbIndex(i);
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -90,7 +99,7 @@ export default function ServicesSection() {
           const isAlt = i % 2 === 1;
           const imgs = catImages(service.cat);
           const main = imgs[0]?.src;
-          const gallery = imgs.slice(1, 4).map((im) => im.src);
+          const thumbs = imgs.slice(1, 4);
           return (
             <div key={service.name}>
               {/* D1 · numbered index divider */}
@@ -116,13 +125,20 @@ export default function ServicesSection() {
                   }`}
                 >
                   {main && (
-                    <Image
-                      src={main}
-                      alt={service.name}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 48vw, 100vw"
-                    />
+                    <button
+                      type="button"
+                      onClick={() => openLb(imgs, 0)}
+                      className="group absolute inset-0 cursor-zoom-in"
+                      aria-label={`${service.name} — kép megnyitása`}
+                    >
+                      <Image
+                        src={main}
+                        alt={service.name}
+                        fill
+                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        sizes="(min-width: 1024px) 48vw, 100vw"
+                      />
+                    </button>
                   )}
                 </div>
 
@@ -147,22 +163,25 @@ export default function ServicesSection() {
                     <span aria-hidden>→</span>
                   </Link>
 
-                  {/* Mini gallery */}
-                  {gallery.length > 0 && (
-                    <div className="mt-6 flex gap-2.5">
-                      {gallery.map((g, gi) => (
-                        <div
-                          key={gi}
-                          className="relative aspect-square flex-1 overflow-hidden rounded-lg"
+                  {/* Mini gallery — fix méretű bélyegképek, lightboxot nyitnak */}
+                  {thumbs.length > 0 && (
+                    <div className="mt-6 flex flex-wrap gap-2.5">
+                      {thumbs.map((t, gi) => (
+                        <button
+                          type="button"
+                          key={t.src}
+                          onClick={() => openLb(imgs, gi + 1)}
+                          className="group relative h-[4.25rem] w-[4.25rem] shrink-0 cursor-zoom-in overflow-hidden rounded-lg"
+                          aria-label="Kép megnyitása"
                         >
                           <Image
-                            src={g}
+                            src={t.src}
                             alt=""
                             fill
-                            className="object-cover"
-                            sizes="(min-width: 1024px) 12vw, 28vw"
+                            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                            sizes="80px"
                           />
-                        </div>
+                        </button>
                       ))}
                     </div>
                   )}
@@ -172,6 +191,8 @@ export default function ServicesSection() {
           );
         })}
       </div>
+
+      <Lightbox images={lbImages} index={lbIndex} setIndex={setLbIndex} />
     </section>
   );
 }
