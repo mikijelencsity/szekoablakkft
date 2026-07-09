@@ -121,7 +121,7 @@ export default function ServicesSection() {
               {/* D1 · numbered index divider */}
               <div
                 className={`service-divider flex items-center gap-5 pb-8 lg:gap-6 lg:pb-10 ${
-                  i === 0 ? "pt-0" : "pt-12 lg:pt-16"
+                  i === 0 ? "pt-0" : "pt-20 lg:pt-28"
                 }`}
               >
                 <span className="font-mono text-4xl font-bold leading-none text-ink/[0.08] lg:text-5xl">
