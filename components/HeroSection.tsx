@@ -6,7 +6,8 @@ import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 
 // Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
-const HERO_MOBILE = "/referenciak/ablak/04.webp";
+// Laptopon a látványos oromfal-üvegezés fotó; mobilon geometriai
+// márka-háttér (fotó nélkül) — lásd a háttér-blokkot lentebb.
 const HERO_DESKTOP = "/referenciak/ablak/13.webp";
 
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
@@ -159,22 +160,46 @@ export default function HeroSection() {
         ref={parallaxRef}
         className="absolute inset-0 -top-[6%] h-[112%] w-full"
       >
-        <Image
-          src={HERO_MOBILE}
-          alt="Modern otthon nagy ablakokkal"
-          fill
-          className="object-cover object-center lg:hidden"
-          sizes="100vw"
-        />
+        {/* Mobil: geometriai márka-háttér (fotó nélkül) */}
+        <div
+          className="absolute inset-0 overflow-hidden bg-[#0a1330] lg:hidden"
+          aria-hidden
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-brand to-[#153bb0]"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 34%, 0 52%)" }}
+          />
+          <div
+            className="absolute inset-0 bg-[#0f1c48]/90"
+            style={{ clipPath: "polygon(0 52%, 100% 34%, 100% 60%, 0 74%)" }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(60% 40% at 80% 20%, rgba(0,180,255,0.42), transparent 60%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-[0.09] mix-blend-overlay"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1330] via-transparent to-transparent" />
+        </div>
+
+        {/* Laptop: fotó */}
         <Image
           src={HERO_DESKTOP}
-          alt=""
+          alt="Modern otthon nagy ablakokkal"
           fill
           className="hidden object-cover object-center lg:block"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,9,14,0.46)_0%,rgba(6,9,14,0.24)_30%,rgba(6,9,14,0.28)_54%,rgba(6,9,14,0.58)_80%,rgba(6,9,14,0.9)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
+        <div className="absolute inset-0 hidden bg-[linear-gradient(180deg,rgba(6,9,14,0.46)_0%,rgba(6,9,14,0.24)_30%,rgba(6,9,14,0.28)_54%,rgba(6,9,14,0.58)_80%,rgba(6,9,14,0.9)_100%)] lg:block" />
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-black/45 via-black/10 to-transparent lg:block" />
       </div>
 
       {/* Body */}
