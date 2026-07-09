@@ -115,6 +115,16 @@ export const categories: RefCategory[] = [
         "src": "/referenciak/redony/02.webp",
         "w": 1600,
         "h": 720
+      },
+      {
+        "src": "/referenciak/redony/03.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/redony/04.webp",
+        "w": 1200,
+        "h": 1600
       }
     ]
   },
@@ -146,6 +156,21 @@ export const categories: RefCategory[] = [
         "src": "/referenciak/festes/05.webp",
         "w": 1600,
         "h": 1200
+      },
+      {
+        "src": "/referenciak/festes/06.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/festes/07.webp",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "/referenciak/festes/08.webp",
+        "w": 1200,
+        "h": 1600
       }
     ]
   },
@@ -205,6 +230,11 @@ export const categories: RefCategory[] = [
       },
       {
         "src": "/referenciak/felujitas/11.webp",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "/referenciak/felujitas/12.webp",
         "w": 1600,
         "h": 1200
       }

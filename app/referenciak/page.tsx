@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
 import Gallery from "@/components/Gallery";
+import Transformations from "@/components/Transformations";
 import { categories } from "@/lib/kepek";
 
 export const metadata: Metadata = {
@@ -26,6 +27,8 @@ export default function ReferenciakPage() {
           { label: "Referenciák", href: "/referenciak" },
         ]}
       />
+
+      <Transformations />
 
       {shown.map((cat, i) => (
         <section
@@ -53,10 +56,6 @@ export default function ReferenciakPage() {
           </div>
         </section>
       ))}
-
-      {/* Előtte / utána — a képek feltöltése után újra bekapcsoljuk.
-      <section className="bg-brand-tint py-20 lg:py-28"> ... </section>
-      */}
 
       <PageCTA
         title="Legyen az Ön otthona a következő referencia."

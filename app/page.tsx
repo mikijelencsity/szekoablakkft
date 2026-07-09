@@ -3,6 +3,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import PaneReveal from "@/components/PaneReveal";
 import ProjectsSection from "@/components/ProjectsSection";
+import Transformations from "@/components/Transformations";
 import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -20,6 +21,7 @@ export default function Home() {
       <div id="projects">
         <ProjectsSection />
       </div>
+      <Transformations limit={1} />
       <WhyUsSection />
       <div id="faq">
         <FAQSection />
