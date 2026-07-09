@@ -90,28 +90,28 @@ export default function HeroSection() {
       tl.fromTo(
         parallaxRef.current,
         { scale: 1.08 },
-        { scale: 1, duration: 2.4, ease: "power2.out" },
+        { scale: 1, duration: 2, ease: "power2.out" },
         0
       )
         .from(
           eyebrowRef.current,
-          { y: 12, autoAlpha: 0, duration: 0.6 },
-          0.2
+          { y: 10, autoAlpha: 0, duration: 0.45 },
+          0.08
         )
         .from(
           lineRefs.current.filter(Boolean),
-          { y: 28, autoAlpha: 0, duration: 0.9, stagger: 0.12, ease: "power3.out" },
-          0.35
+          { y: 24, autoAlpha: 0, duration: 0.6, stagger: 0.08, ease: "power3.out" },
+          0.2
         )
         .from(
           ctaRef.current,
-          { y: 14, autoAlpha: 0, duration: 0.7 },
-          "-=0.45"
+          { y: 12, autoAlpha: 0, duration: 0.45 },
+          0.4
         )
         .from(
           barRef.current,
-          { autoAlpha: 0, y: 16, duration: 0.8 },
-          "-=0.4"
+          { autoAlpha: 0, y: 14, duration: 0.5 },
+          0.52
         );
 
       // Slow parallax on scroll (independent of the entrance).
