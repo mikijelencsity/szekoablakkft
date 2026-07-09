@@ -65,8 +65,8 @@ export default function WhyUsSection() {
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto">
           <div ref={imageRef} className="absolute inset-0 -top-[6%] h-[112%] w-full">
             <Image
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop"
-              alt="Építőcsapat munka közben"
+              src="/referenciak/felujitas/10.webp"
+              alt="Elkészült felújítás"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 45vw, 100vw"

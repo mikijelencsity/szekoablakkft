@@ -10,9 +10,6 @@ export const metadata: Metadata = {
     "Ablakcsere, redőnyök, teljes körű felújítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.",
 };
 
-const U = (id: string, w = 1400) =>
-  `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
-
 const services = [
   {
     n: "01",
@@ -24,7 +21,7 @@ const services = [
       "Egyedi méretek, gyártótól",
       "Beépítés 10 év garanciával",
     ],
-    image: "photo-1531835551805-16d864c8d311",
+    image: "/referenciak/ablak/04.webp",
   },
   {
     n: "02",
@@ -36,7 +33,7 @@ const services = [
       "Szúnyogháló és árnyékolás",
       "Okosotthon-integráció",
     ],
-    image: "photo-1560185007-cde436f6a4d0",
+    image: "/referenciak/redony/01.webp",
   },
   {
     n: "03",
@@ -48,7 +45,7 @@ const services = [
       "Egy felelős kapcsolattartó",
       "Tiszta munkaterület, fix határidő",
     ],
-    image: "photo-1621905251189-08b45d6a269e",
+    image: "/referenciak/felujitas/02.webp",
   },
   {
     n: "04",
@@ -60,7 +57,7 @@ const services = [
       "Precíz élek, alapos takarás",
       "Prémium festékek",
     ],
-    image: "photo-1562259949-e8e7689d7828",
+    image: "/referenciak/festes/01.webp",
   },
   {
     n: "05",
@@ -72,7 +69,7 @@ const services = [
       "Aljzatkiegyenlítés",
       "Tartós, sík felület",
     ],
-    image: "photo-1581858726788-75bc0f6a952d",
+    image: "/referenciak/burkolas/01.webp",
   },
 ];
 
@@ -83,7 +80,7 @@ export default function SzolgaltatasokPage() {
         eyebrow="Szolgáltatások"
         title="Amit egy kézből elvégzünk"
         subtitle="Ablaktól a padlóig — egy megbízható csapat, tiszta kivitelezés és garancia minden munkára."
-        image={U("photo-1600585154340-be6161a56a0c", 2000)}
+        image="/referenciak/ablak/13.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Szolgáltatások", href: "/szolgaltatasok" },
@@ -105,7 +102,7 @@ export default function SzolgaltatasokPage() {
                   }`}
                 >
                   <Image
-                    src={U(s.image)}
+                    src={s.image}
                     alt={s.name}
                     fill
                     className="object-cover"

@@ -2,29 +2,23 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap } from "@/lib/gsap";
-import BeforeAfterSlider from "./BeforeAfterSlider";
 
 const projects = [
   {
-    title: "Családi ház ablakcsere",
-    location: "Budapest, XI. kerület",
-    image:
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1600&auto=format&fit=crop",
+    title: "Ablakcsere",
+    image: "/referenciak/ablak/13.webp",
     size: "lg:col-span-2 lg:row-span-2",
   },
   {
-    title: "Konyhafelújítás",
-    location: "Szentendre",
-    image:
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop",
+    title: "Felújítás",
+    image: "/referenciak/felujitas/02.webp",
     size: "",
   },
   {
-    title: "Homlokzatfestés",
-    location: "Gödöllő",
-    image:
-      "https://images.unsplash.com/photo-1595514535215-a68f0e6a1b5c?q=80&w=1600&auto=format&fit=crop",
+    title: "Festés",
+    image: "/referenciak/festes/01.webp",
     size: "",
   },
 ];
@@ -58,19 +52,29 @@ export default function ProjectsSection() {
 
   return (
     <section ref={sectionRef} className="angle-top bg-white py-24 lg:py-32">
-      <div className="container-px mb-14 max-w-2xl lg:mb-20">
-        <p className="text-sm font-medium uppercase tracking-wider text-brand">
-          Bizonyíték, nem ígéret
-        </p>
-        <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
-          Valódi projektek, valódi eredmények.
-        </h2>
+      <div className="container-px mb-14 flex flex-wrap items-end justify-between gap-4 lg:mb-20">
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium uppercase tracking-wider text-brand">
+            Bizonyíték, nem ígéret
+          </p>
+          <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+            Valódi projektek, valódi eredmények.
+          </h2>
+        </div>
+        <Link
+          href="/referenciak"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-brand-dark"
+        >
+          Összes referencia
+          <span aria-hidden>→</span>
+        </Link>
       </div>
 
       <div className="container-px grid grid-cols-1 gap-5 lg:grid-cols-3 lg:grid-rows-2">
         {projects.map((project) => (
-          <div
+          <Link
             key={project.title}
+            href="/referenciak"
             className={`project-tile group relative min-h-[280px] overflow-hidden rounded-2xl ${project.size}`}
           >
             <Image
@@ -83,28 +87,9 @@ export default function ProjectsSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute bottom-0 left-0 translate-y-3 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               <p className="font-medium text-white">{project.title}</p>
-              <p className="text-sm text-white/75">{project.location}</p>
             </div>
-          </div>
+          </Link>
         ))}
-      </div>
-
-      <div className="container-px mt-20">
-        <p className="mb-6 text-sm font-medium uppercase tracking-wider text-brand">
-          Húzza az összehasonlításhoz
-        </p>
-        <div className="grid gap-8 lg:grid-cols-2">
-          <BeforeAfterSlider
-            alt="Nappali ablakcsere"
-            before="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop"
-            after="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
-          />
-          <BeforeAfterSlider
-            alt="Homlokzatfestés"
-            before="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop"
-            after="https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=1200&auto=format&fit=crop"
-          />
-        </div>
       </div>
     </section>
   );
