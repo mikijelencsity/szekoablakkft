@@ -70,6 +70,25 @@ body {
   }
 }
 
+/* Services heading — pulsing eyebrow dot */
+@keyframes dotpulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(36, 87, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(36, 87, 255, 0);
+  }
+}
+.dot-pulse {
+  animation: dotpulse 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dot-pulse {
+    animation: none;
+  }
+}
+
 /* Angled section top — diagonal separator between sections */
 .angle-top {
   --angle: 2.25rem;

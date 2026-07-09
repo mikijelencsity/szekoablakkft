@@ -50,6 +50,8 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   const sectionRef = useRef<HTMLElement>(null);
+  const headRef = useRef<HTMLDivElement>(null);
+  const strokeRef = useRef<SVGPathElement>(null);
   const [lbImages, setLbImages] = useState<RefImage[]>([]);
   const [lbIndex, setLbIndex] = useState<number | null>(null);
 
@@ -60,6 +62,30 @@ export default function ServicesSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Heading — fade up + hand-drawn underline draws in
+      const head = headRef.current;
+      if (head) {
+        gsap.from(head.querySelectorAll<HTMLElement>(".he-fx"), {
+          y: 22,
+          autoAlpha: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: head, start: "top 82%" },
+        });
+      }
+      const stroke = strokeRef.current;
+      if (stroke) {
+        const len = stroke.getTotalLength();
+        gsap.set(stroke, { strokeDasharray: len, strokeDashoffset: len });
+        gsap.to(stroke, {
+          strokeDashoffset: 0,
+          duration: 1.1,
+          ease: "power2.out",
+          scrollTrigger: { trigger: head, start: "top 76%" },
+        });
+      }
+
       gsap.utils
         .toArray<HTMLElement>(".service-row, .service-divider")
         .forEach((el) => {
@@ -85,12 +111,35 @@ export default function ServicesSection() {
 
   return (
     <section ref={sectionRef} className="bg-white py-24 lg:py-32">
-      <div className="container-px mb-16 max-w-3xl lg:mb-24">
-        <p className="text-sm font-medium uppercase tracking-wider text-brand lg:text-base">
+      <div
+        ref={headRef}
+        className="container-px mx-auto mb-16 max-w-3xl text-center lg:mb-24"
+      >
+        <span className="he-fx inline-flex items-center gap-2.5 rounded-full bg-brand-tint px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-brand">
+          <span className="dot-pulse h-[7px] w-[7px] rounded-full bg-brand" />
           Amit csinálunk
-        </p>
-        <h2 className="mt-4 text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
-          Öt szolgáltatás, egy megbízható csapat.
+        </span>
+        <h2 className="he-fx mx-auto mt-6 max-w-2xl text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl sm:leading-[1.05] lg:text-6xl">
+          Öt szolgáltatás,
+          <br />
+          <span className="relative inline-block">
+            egy megbízható csapat.
+            <svg
+              className="pointer-events-none absolute -bottom-2 left-[-2%] h-[0.42em] w-[104%] overflow-visible"
+              viewBox="0 0 400 18"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                ref={strokeRef}
+                d="M4 12 C 90 4, 300 4, 396 10"
+                stroke="var(--brand-blue)"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
         </h2>
       </div>
 
