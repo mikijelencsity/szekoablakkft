@@ -79,22 +79,24 @@ export default function ServicesSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".service-row").forEach((row) => {
-        gsap.fromTo(
-          row,
-          { y: 42, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: row,
-              start: "top 82%",
-            },
-          }
-        );
-      });
+      gsap.utils
+        .toArray<HTMLElement>(".service-row, .service-divider")
+        .forEach((el) => {
+          gsap.fromTo(
+            el,
+            { y: 32, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.7,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: el,
+                start: "top 85%",
+              },
+            }
+          );
+        });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -111,41 +113,51 @@ export default function ServicesSection() {
         </h2>
       </div>
 
-      <div className="container-px flex flex-col gap-16 lg:gap-24">
+      <div className="container-px flex flex-col">
         {services.map((service, i) => {
           const isAlt = i % 2 === 1;
           return (
-            <div
-              key={service.name}
-              className="service-row grid items-center gap-6 lg:grid-cols-2 lg:gap-0"
-            >
-              {/* Main photo */}
+            <div key={service.name}>
+              {/* D1 · numbered index divider */}
               <div
-                className={`relative aspect-[16/11] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)] ${
-                  isAlt ? "lg:order-2" : ""
+                className={`service-divider flex items-center gap-5 pb-8 lg:gap-6 lg:pb-10 ${
+                  i === 0 ? "pt-0" : "pt-12 lg:pt-16"
                 }`}
               >
-                <Image
-                  src={U(service.main, 1400)}
-                  alt={service.name}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 48vw, 100vw"
-                />
+                <span className="font-mono text-4xl font-bold leading-none text-ink/[0.08] lg:text-5xl">
+                  {service.n}
+                </span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-soft whitespace-nowrap">
+                  {service.name}
+                </span>
+                <span className="h-px flex-1 bg-black/10" />
               </div>
 
-              {/* Overlapping editorial card */}
-              <div
-                className={`relative z-10 rounded-2xl border border-black/5 bg-white p-7 shadow-[0_30px_60px_-30px_rgba(17,23,32,0.32)] lg:p-9 ${
-                  isAlt ? "lg:order-1 lg:-mr-16" : "lg:-ml-16"
-                }`}
-              >
-                <div className="font-mono text-2xl font-bold leading-none text-ink/10">
-                  {service.n}
+              <div className="service-row grid items-center gap-6 lg:grid-cols-2 lg:gap-0">
+                {/* Main photo */}
+                <div
+                  className={`relative aspect-[16/11] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)] ${
+                    isAlt ? "lg:order-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={U(service.main, 1400)}
+                    alt={service.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 48vw, 100vw"
+                  />
                 </div>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">
-                  {service.name}
-                </h3>
+
+                {/* Overlapping editorial card */}
+                <div
+                  className={`relative z-10 rounded-2xl border border-black/5 bg-white p-7 shadow-[0_30px_60px_-30px_rgba(17,23,32,0.32)] lg:p-9 ${
+                    isAlt ? "lg:order-1 lg:-mr-16" : "lg:-ml-16"
+                  }`}
+                >
+                  <h3 className="text-2xl font-semibold tracking-tight text-ink">
+                    {service.name}
+                  </h3>
                 <p className="mt-3 max-w-md leading-relaxed text-ink-soft">
                   {service.desc}
                 </p>
@@ -173,7 +185,8 @@ export default function ServicesSection() {
                         sizes="(min-width: 1024px) 12vw, 28vw"
                       />
                     </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

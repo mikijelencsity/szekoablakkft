@@ -9,7 +9,7 @@ const points = [
 
 export default function HomeQuote() {
   return (
-    <section id="ajanlatkeres" className="bg-brand-tint py-24 lg:py-32">
+    <section id="ajanlatkeres" className="angle-top bg-brand-tint py-24 lg:py-32">
       <div className="container-px grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <p className="text-sm font-medium uppercase tracking-wider text-brand">

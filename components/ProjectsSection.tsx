@@ -57,7 +57,7 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white py-24 lg:py-32">
+    <section ref={sectionRef} className="angle-top bg-white py-24 lg:py-32">
       <div className="container-px mb-14 max-w-2xl lg:mb-20">
         <p className="text-sm font-medium uppercase tracking-wider text-brand">
           Bizonyíték, nem ígéret

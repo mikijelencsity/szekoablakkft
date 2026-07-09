@@ -54,7 +54,10 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-brand-tint py-24 lg:py-32">
+    <section
+      ref={sectionRef}
+      className="angle-top bg-brand-tint py-24 lg:py-32"
+    >
       <div className="container-px max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-wider text-brand">
           Hogyan dolgozunk

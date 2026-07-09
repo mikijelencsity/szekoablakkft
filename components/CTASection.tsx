@@ -32,7 +32,7 @@ export default function CTASection() {
     <section
       id="cta"
       ref={sectionRef}
-      className="bg-surface-dark py-28 text-center text-white lg:py-36"
+      className="angle-top bg-surface-dark py-28 text-center text-white lg:py-36"
     >
       <div className="cta-content container-px mx-auto max-w-xl">
         <h2 className="text-3xl font-medium leading-tight tracking-tight lg:text-4xl">

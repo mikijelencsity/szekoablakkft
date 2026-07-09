@@ -70,6 +70,18 @@ body {
   }
 }
 
+/* Angled section top — diagonal separator between sections */
+.angle-top {
+  --angle: 2.25rem;
+  clip-path: polygon(0 var(--angle), 100% 0, 100% 100%, 0 100%);
+  margin-top: calc(-1 * var(--angle));
+}
+@media (min-width: 1024px) {
+  .angle-top {
+    --angle: 3.5rem;
+  }
+}
+
 /* Footer aurora — slow drifting blue glows */
 @keyframes aurora1 {
   to {

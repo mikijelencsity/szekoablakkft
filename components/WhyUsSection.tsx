@@ -57,7 +57,10 @@ export default function WhyUsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-surface-dark py-24 text-white lg:py-32">
+    <section
+      ref={sectionRef}
+      className="angle-top bg-surface-dark py-24 text-white lg:py-32"
+    >
       <div className="container-px grid gap-12 lg:grid-cols-2 lg:gap-20">
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto">
           <div ref={imageRef} className="absolute inset-0 -top-[6%] h-[112%] w-full">
