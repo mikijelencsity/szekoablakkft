@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import type { RefImage } from "@/lib/referenciak";
 
@@ -13,6 +13,8 @@ export default function Lightbox({
   index: number | null;
   setIndex: (i: number | null) => void;
 }) {
+  const touchX = useRef<number | null>(null);
+
   const close = useCallback(() => setIndex(null), [setIndex]);
   const go = useCallback(
     (dir: number) => {
@@ -39,6 +41,10 @@ export default function Lightbox({
 
   if (index === null || !images[index]) return null;
 
+  const multi = images.length > 1;
+  const arrow =
+    "flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25";
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/92 p-4 backdrop-blur-sm"
@@ -47,13 +53,14 @@ export default function Lightbox({
       <button
         type="button"
         onClick={close}
-        className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-colors hover:bg-white/20"
+        className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25"
         aria-label="Bezárás"
       >
         ✕
       </button>
 
-      {images.length > 1 && (
+      {/* Desktop side arrows */}
+      {multi && (
         <>
           <button
             type="button"
@@ -61,7 +68,7 @@ export default function Lightbox({
               e.stopPropagation();
               go(-1);
             }}
-            className="absolute left-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-colors hover:bg-white/20 sm:left-6"
+            className={`absolute left-6 top-1/2 z-20 hidden -translate-y-1/2 sm:flex ${arrow}`}
             aria-label="Előző"
           >
             ‹
@@ -72,7 +79,7 @@ export default function Lightbox({
               e.stopPropagation();
               go(1);
             }}
-            className="absolute right-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition-colors hover:bg-white/20 sm:right-6"
+            className={`absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 sm:flex ${arrow}`}
             aria-label="Következő"
           >
             ›
@@ -80,25 +87,57 @@ export default function Lightbox({
         </>
       )}
 
+      {/* Image — swipeable on touch */}
       <div
-        className="relative flex max-h-[86vh] max-w-[92vw] items-center justify-center"
+        className="relative flex max-h-[78vh] max-w-[94vw] items-center justify-center sm:max-h-[86vh] sm:max-w-[92vw]"
         onClick={(e) => e.stopPropagation()}
+        onTouchStart={(e) => {
+          touchX.current = e.touches[0].clientX;
+        }}
+        onTouchEnd={(e) => {
+          if (touchX.current === null) return;
+          const dx = e.changedTouches[0].clientX - touchX.current;
+          if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+          touchX.current = null;
+        }}
       >
         <Image
           src={images[index].src}
           alt=""
           width={images[index].w}
           height={images[index].h}
-          className="max-h-[86vh] w-auto rounded-lg object-contain"
-          sizes="92vw"
+          className="max-h-[78vh] w-auto rounded-lg object-contain sm:max-h-[86vh]"
+          sizes="94vw"
           priority
         />
       </div>
 
-      {images.length > 1 && (
-        <span className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white">
-          {index + 1} / {images.length}
-        </span>
+      {/* Bottom controls — always tappable, especially on mobile */}
+      {multi && (
+        <div
+          className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25 sm:hidden"
+            aria-label="Előző"
+          >
+            ‹
+          </button>
+          <span className="rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white">
+            {index + 1} / {images.length}
+          </span>
+          <button
+            type="button"
+            onClick={() => go(1)}
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white transition-colors hover:bg-white/25 sm:hidden"
+            aria-label="Következő"
+          >
+            ›
+          </button>
+        </div>
       )}
     </div>
   );
