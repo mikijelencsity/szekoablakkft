@@ -86,7 +86,7 @@ export default function RolunkPage() {
 
           <Reveal className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)]">
             <Image
-              src={U("photo-1600585154340-be6161a56a0c")}
+              src="/referenciak/ablak/06.webp"
               alt="Szeko Ablak Kft munka"
               fill
               className="object-cover"

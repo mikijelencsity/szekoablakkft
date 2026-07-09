@@ -6,8 +6,7 @@ import Link from "next/link";
 import Button from "./Button";
 import { gsap } from "@/lib/gsap";
 
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=75&w=1920&auto=format&fit=crop";
+const HERO_IMAGE = "/referenciak/ablak/09.webp";
 
 const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
 

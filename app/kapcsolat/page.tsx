@@ -9,9 +9,6 @@ export const metadata: Metadata = {
     "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Hívjon minket, írjon e-mailt, vagy töltse ki az ajánlatkérő űrlapot.",
 };
 
-const U = (id: string, w = 2000) =>
-  `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
-
 const contacts = [
   {
     label: "Telefon",
@@ -40,7 +37,7 @@ export default function KapcsolatPage() {
         eyebrow="Kapcsolat"
         title="Kérjen ingyenes árajánlatot"
         subtitle="Töltse ki az űrlapot, vagy keressen minket telefonon — pár napon belül tételes ajánlattal jelentkezünk."
-        image={U("photo-1503387762-592deb58ef4e")}
+        image="/referenciak/ablak/01.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Kapcsolat", href: "/kapcsolat" },
