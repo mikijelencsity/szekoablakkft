@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# eredeti (feldolgozatlan) referenciaképek — csak a legyártott
+# public/referenciak/ verzió kerül a repóba, az eredetik a gépen maradnak
+/_kepek/**
+!/_kepek/OLVASSEL.txt
+!/_kepek/*/
+!/_kepek/*/.gitkeep
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
