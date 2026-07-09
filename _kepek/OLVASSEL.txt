@@ -1,36 +1,20 @@
 SZEKO ABLAK – KÉPEK IDE
 =======================
 
-Ide dobd be a képeket, a többit a szkript elintézi (átméretezés,
-webre optimalizálás, forgatás, helyadat kiszedése). Nem kell átnevezni,
-nem kell méretezni. JPG, PNG és iPhone HEIC is jó.
+Csak dobd be ide a képeket, a besorolást (ablak, redőny, festés,
+felújítás, burkolás) ÉS az előtte/utána párosítást én csinálom meg
+a képek alapján. Nem kell átnevezni, méretezni, rendezni.
+JPG, PNG és iPhone HEIC is jó.
 
-1) SIMA REFERENCIAKÉPEK  – szolgáltatás szerinti mappákba:
+1) SIMA REFERENCIAKÉPEK:
+   Egyszerűen ide, a _kepek mappába dobd be mindet. Akárhány lehet.
+   (Én ránézek mindegyikre és besorolom a megfelelő szolgáltatáshoz.)
 
-   _kepek/ablak/       -> ablakos munkák képei
-   _kepek/redony/      -> redőnyös munkák
-   _kepek/festes/      -> festés
-   _kepek/felujitas/   -> felújítás
-   _kepek/burkolas/    -> padló / burkolás
+2) ELŐTTE / UTÁNA KÉPEK:
+   Ezeket a _kepek/elotte-utana mappába tedd (csak ide, egy kupacba).
+   Én párosítom össze őket és eldöntöm, melyik az előtte / utána.
+   -> Ha egy pár nem egyértelmű, rákérdezek.
 
-   Csak húzd be a képeket a megfelelő mappába, akárhány lehet.
-
-2) ELŐTTE / UTÁNA PÁROK  – _kepek/elotte-utana/ alá:
-
-   Minden párnak külön mappa (a mappa neve mindegy, pl. "nappali").
-   A mappában PONTOSAN 2 kép legyen, a fájlnévben szerepeljen az,
-   hogy melyik melyik:
-
-   _kepek/elotte-utana/nappali/elotte.jpg
-   _kepek/elotte-utana/nappali/utana.jpg
-
-   _kepek/elotte-utana/furdo/furdo-elotte.jpg
-   _kepek/elotte-utana/furdo/furdo-utana.jpg
-
-   (Ami a fájlnévben "elotte"/"előtte" -> előtte kép,
-    ami "utana"/"után" -> utána kép.)
-
-HA KÉSZ VAGY: szólj nekem ("kész a képek"), és lefuttatom a
-feldolgozást, majd beépítem az oldalba. A nagy eredeti fájlok itt
-maradnak a gépeden (nem kerülnek fel a netre), csak a legyártott,
-optimalizált változatok mennek ki.
+HA KÉSZ VAGY: szólj ("kész a képek"), és feldolgozom + beépítem.
+A nagy eredeti fájlok a gépeden maradnak, csak az optimalizált
+webes változatok kerülnek fel.
