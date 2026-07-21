@@ -8,10 +8,12 @@ export default function Lightbox({
   images,
   index,
   setIndex,
+  title,
 }: {
   images: RefImage[];
   index: number | null;
   setIndex: (i: number | null) => void;
+  title?: string;
 }) {
   const touchX = useRef<number | null>(null);
 
@@ -103,7 +105,7 @@ export default function Lightbox({
       >
         <Image
           src={images[index].src}
-          alt=""
+          alt={title ? `${title} — referencia kép ${index + 1}` : ""}
           width={images[index].w}
           height={images[index].h}
           className="max-h-[80vh] w-auto rounded-lg object-contain"

@@ -2,9 +2,9 @@ import Reveal from "./Reveal";
 import QuoteForm from "./QuoteForm";
 
 const points = [
-  "Ingyenes, kötelezettség nélküli helyszíni felmérés",
+  "Ingyenes, kötelezettség nélküli árajánlat",
   "Tételes, átlátható árajánlat rejtett költségek nélkül",
-  "Válaszidő általában 1 munkanap",
+  "Válaszidő általában 1-2 munkanap",
 ];
 
 export default function HomeQuote() {
@@ -19,8 +19,8 @@ export default function HomeQuote() {
             Kérjen ingyenes árajánlatot
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
-            Írja le pár szóban, miben segíthetünk, és pár napon belül tételes
-            ajánlattal jelentkezünk. Semmi nyomás, semmi kötelezettség.
+            Írja le pár szóban, miben segíthetünk, és 1-2 munkanapon belül
+            tételes ajánlattal jelentkezünk, kötelezettség nélkül.
           </p>
           <ul className="mt-8 flex flex-col gap-3">
             {points.map((p) => (

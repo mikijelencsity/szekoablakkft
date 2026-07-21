@@ -4,10 +4,16 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
 
+const TITLE = "Szolgáltatások";
+const DESCRIPTION =
+  "Ablak- és ajtócsere, redőnyök, teljes körű lejavítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.";
+
 export const metadata: Metadata = {
-  title: "Szolgáltatások | Szeko Ablak Kft",
-  description:
-    "Ablakcsere, redőnyök, teljes körű felújítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/szolgaltatasok" },
+  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/szolgaltatasok" },
+  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 const services = [
@@ -25,6 +31,18 @@ const services = [
   },
   {
     n: "02",
+    name: "Ajtók",
+    desc: "Beltéri és bejárati ajtók pontos beépítéssel — biztonság, hangszigetelés és stílus egy kézből.",
+    features: [
+      "Bejárati és beltéri ajtók",
+      "Biztonsági megoldások",
+      "Egyedi méretek, gyártótól",
+      "Precíz, réstelen beépítés",
+    ],
+    image: "/referenciak/felujitas/02.webp",
+  },
+  {
+    n: "03",
     name: "Redőnyök",
     desc: "Redőnyök a biztonságért, a fényszabályozásért és a nyári hővédelemért.",
     features: [
@@ -35,19 +53,19 @@ const services = [
     image: "/referenciak/redony/01.webp",
   },
   {
-    n: "03",
+    n: "04",
     name: "Felújítás",
-    desc: "Teljes körű lakás- és házfelújítás egy kézből — a tervezéstől a kulcsátadásig, tiszta munkaterülettel és tartható határidőkkel.",
+    desc: "Teljes körű lejavítás egy kézből — gipszkarton, festés és burkolás, tiszta munkaterülettel és tartható határidőkkel.",
     features: [
-      "Teljes lakás- és házfelújítás",
-      "Tervezéstől a kivitelezésig",
-      "Egy felelős kapcsolattartó",
+      "Gipszkartonozás",
+      "Festés, glettelés",
+      "Padló- és falburkolás",
       "Tiszta munkaterület, fix határidő",
     ],
     image: "/referenciak/felujitas/02.webp",
   },
   {
-    n: "04",
+    n: "05",
     name: "Festés",
     desc: "Tiszta, precíz bel- és kültéri festés — pontos élekkel, alapos felületkezeléssel és prémium anyagokkal, gyors kivitelezéssel.",
     features: [
@@ -59,7 +77,7 @@ const services = [
     image: "/referenciak/festes/01.webp",
   },
   {
-    n: "05",
+    n: "06",
     name: "Padlóburkolás",
     desc: "Hideg és meleg burkolatok szakszerű fektetése — laminált, parketta, csempe és kő, tartós, sík aljzatra.",
     features: [
@@ -150,7 +168,7 @@ export default function SzolgaltatasokPage() {
 
       <PageCTA
         title="Melyik szolgáltatás érdekli?"
-        text="Kérjen ingyenes helyszíni felmérést, és pár napon belül tételes árajánlatot adunk."
+        text="Kérjen ingyenes árajánlatot, 1-2 munkanapon belül jelentkezünk."
       />
     </main>
   );

@@ -110,7 +110,7 @@ export default function Preloader() {
           transitionDelay: playing ? "400ms" : "0ms",
         }}
       >
-        Alapítva 2007
+        Alapítva 2010
       </span>
     </div>
   );

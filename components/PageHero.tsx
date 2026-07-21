@@ -36,11 +36,28 @@ export default function PageHero({
     return () => ctx.revert();
   }, []);
 
+  const breadcrumbSchema = crumbs && {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.label,
+      item: `https://szekoablak.hu${c.href}`,
+    })),
+  };
+
   return (
     <section
       ref={rootRef}
       className="relative flex min-h-[54vh] w-full items-end overflow-hidden bg-surface-dark"
     >
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      )}
       <div className="absolute inset-0">
         <Image
           src={image}

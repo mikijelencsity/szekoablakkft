@@ -78,7 +78,7 @@ export default function Footer() {
               className="h-8 w-auto"
             />
             <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/50">
-              Ablak · Redőny · Felújítás
+              Nyílászáró · Redőny · Felújítás
             </p>
           </div>
 

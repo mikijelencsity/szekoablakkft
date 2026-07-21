@@ -24,24 +24,30 @@ const services: Service[] = [
   },
   {
     n: "02",
+    name: "Ajtók",
+    cat: "ajto",
+    desc: "Beltéri és bejárati ajtók pontos beépítéssel — biztonság, hangszigetelés és stílus egy kézből.",
+  },
+  {
+    n: "03",
     name: "Redőnyök",
     cat: "redony",
     desc: "Redőnyök a biztonságért, fényszabályozásért és a nyári hővédelemért.",
   },
   {
-    n: "03",
+    n: "04",
     name: "Felújítás",
     cat: "felujitas",
-    desc: "Teljes körű lakás- és házfelújítás egy kézből — tervezéstől a kulcsátadásig, tiszta munkaterülettel és tartható határidőkkel.",
+    desc: "Teljes körű lejavítás egy kézből — gipszkarton, festés és burkolás, tiszta munkaterülettel és tartható határidőkkel.",
   },
   {
-    n: "04",
+    n: "05",
     name: "Festés",
     cat: "festes",
     desc: "Tiszta, precíz bel- és kültéri festés — pontos élekkel, prémium anyagokkal, gyors kivitelezéssel.",
   },
   {
-    n: "05",
+    n: "06",
     name: "Padlóburkolás",
     cat: "burkolas",
     desc: "Hideg és meleg burkolatok szakszerű fektetése — laminált, parketta, csempe és kő, tartós, sík aljzatra.",
@@ -53,10 +59,12 @@ export default function ServicesSection() {
   const headRef = useRef<HTMLDivElement>(null);
   const [lbImages, setLbImages] = useState<RefImage[]>([]);
   const [lbIndex, setLbIndex] = useState<number | null>(null);
+  const [lbTitle, setLbTitle] = useState<string | undefined>(undefined);
 
-  const openLb = (imgs: RefImage[], i: number) => {
+  const openLb = (imgs: RefImage[], i: number, title?: string) => {
     setLbImages(imgs);
     setLbIndex(i);
+    setLbTitle(title);
   };
 
   useEffect(() => {
@@ -111,7 +119,7 @@ export default function ServicesSection() {
           Amit csinálunk
         </span>
         <h2 className="he-fx mx-auto mt-6 max-w-2xl text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl sm:leading-[1.05] lg:text-6xl">
-          Öt szolgáltatás, egy megbízható csapat.
+          Hat szolgáltatás, egy megbízható csapat.
         </h2>
       </div>
 
@@ -148,13 +156,13 @@ export default function ServicesSection() {
                   {main && (
                     <button
                       type="button"
-                      onClick={() => openLb(imgs, 0)}
+                      onClick={() => openLb(imgs, 0, service.name)}
                       className="group absolute inset-0 cursor-zoom-in"
                       aria-label={`${service.name} — kép megnyitása`}
                     >
                       <Image
                         src={main}
-                        alt={service.name}
+                        alt={`${service.name} — Szeko Ablak Kft referencia`}
                         fill
                         className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                         sizes="(min-width: 1024px) 48vw, 100vw"
@@ -199,13 +207,13 @@ export default function ServicesSection() {
                         <button
                           type="button"
                           key={t.src}
-                          onClick={() => openLb(imgs, gi + 1)}
+                          onClick={() => openLb(imgs, gi + 1, service.name)}
                           className="group relative h-[4.25rem] w-[4.25rem] shrink-0 cursor-zoom-in overflow-hidden rounded-lg"
                           aria-label="Kép megnyitása"
                         >
                           <Image
                             src={t.src}
-                            alt=""
+                            alt={`${service.name} — referencia kép ${gi + 2}`}
                             fill
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                             sizes="80px"
@@ -222,7 +230,7 @@ export default function ServicesSection() {
         })}
       </div>
 
-      <Lightbox images={lbImages} index={lbIndex} setIndex={setLbIndex} />
+      <Lightbox images={lbImages} index={lbIndex} setIndex={setLbIndex} title={lbTitle} />
     </section>
   );
 }

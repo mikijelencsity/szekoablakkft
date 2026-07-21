@@ -14,7 +14,7 @@ export type TrProject = {
 export const projects: TrProject[] = [
   {
     "slug": "projekt-1",
-    "title": "Családi ház — teljes felújítás",
+    "title": "Szoba-kamra felújítás",
     "location": "2024",
     "before": [
       {

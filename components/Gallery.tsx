@@ -5,7 +5,13 @@ import Image from "next/image";
 import type { RefImage } from "@/lib/referenciak";
 import Lightbox from "./Lightbox";
 
-export default function Gallery({ images }: { images: RefImage[] }) {
+export default function Gallery({
+  images,
+  title,
+}: {
+  images: RefImage[];
+  title?: string;
+}) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
@@ -22,7 +28,7 @@ export default function Gallery({ images }: { images: RefImage[] }) {
           >
             <Image
               src={img.src}
-              alt=""
+              alt={title ? `${title} — referencia kép ${i + 1}` : ""}
               width={img.w}
               height={img.h}
               className="h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
@@ -32,7 +38,7 @@ export default function Gallery({ images }: { images: RefImage[] }) {
         ))}
       </div>
 
-      <Lightbox images={images} index={open} setIndex={setOpen} />
+      <Lightbox images={images} index={open} setIndex={setOpen} title={title} />
     </>
   );
 }

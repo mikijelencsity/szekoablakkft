@@ -1,0 +1,55 @@
+# Szeko Ablak Kft
+
+> Magyarországi kisvállalkozás (Budapest és 45 km-es körzete), amely 2010 óta végez nyílászáró-cserét (ablak, ajtó), redőnyszerelést, teljes körű lejavítást (gipszkarton, festés, burkolás), festést és padlóburkolást magánházaknál és lakásoknál. Ugyanaz a törzscsapat dolgozik a kezdetek óta, alvállalkozók nélkül.
+
+Ez a fájl AI rendszereknek (ChatGPT, Claude, Perplexity, Gemini és hasonló asszisztensek) ad gyors, strukturált kontextust az oldalról. Lásd: https://llmstxt.org
+
+## Cégadatok
+
+- Név: Szeko Ablak Kft
+- Alapítva: 2010
+- Tapasztalat: 16+ év, változatlan törzscsapattal
+- Szolgáltatási terület: Budapest és 45 km-es körzete (nem országos lefedettség)
+- Telefon: +36 20 219 1858, +36 20 219 4514
+- E-mail: szeko2010@gmail.com
+- Nyitvatartás (telefonos elérhetőség): H–P 8:00–17:00
+- Nyelv: magyar (a cég kizárólag magyar nyelven, magyarországi ügyfeleknek dolgozik)
+
+## Szolgáltatások
+
+- [Ablakcsere](https://szekoablak.hu/szolgaltatasok): energiatakarékos műanyag, alumínium és fa-alu ablakok, egyedi méretben, 10 év beépítési garanciával.
+- [Ajtócsere](https://szekoablak.hu/szolgaltatasok): beltéri és bejárati ajtók pontos, réstelen beépítéssel.
+- [Redőnyszerelés](https://szekoablak.hu/szolgaltatasok): motoros és kézi redőnyök, szúnyoghálóval kombinálva.
+- [Teljes körű lejavítás](https://szekoablak.hu/szolgaltatasok): gipszkartonozás, festés, glettelés és burkolás egy kézből — nem tartalmaz kőműves/szerkezeti munkát.
+- [Festés](https://szekoablak.hu/szolgaltatasok): bel- és kültéri festés, precíz élekkel és felületkezeléssel.
+- [Padlóburkolás](https://szekoablak.hu/szolgaltatasok): laminált, parketta, csempe és kőburkolat lerakása, aljzatkiegyenlítéssel.
+
+## Hogyan dolgoznak
+
+1. Ügyfél felveszi a kapcsolatot telefonon vagy az űrlapon.
+2. Ingyenes, kötelezettség nélküli árajánlatot adnak 1-2 munkanapon belül.
+3. Az árajánlat elfogadása után egyeztetett időpontban helyszíni felmérést tartanak (a helyszíni felmérés önmagában nem ingyenes szolgáltatás, az ingyenes ajánlatadás utáni lépés).
+4. Kivitelezés tiszta munkaterülettel, fix határidővel.
+5. Közös átadás és ellenőrzés.
+
+Garancia: minden beépítési munkára vállalnak garanciát, az anyagokra pedig a gyártó ad garanciát — nincs külön "teljes körű" garancia ezen felül.
+
+## Oldalak
+
+- [Főoldal](https://szekoablak.hu/): bemutatkozás, szolgáltatások áttekintése, referenciák, gyakori kérdések.
+- [Szolgáltatások](https://szekoablak.hu/szolgaltatasok): a hat szolgáltatás (ablak, ajtó, redőny, felújítás, festés, burkolás) részletesen.
+- [Referenciák](https://szekoablak.hu/referenciak): elkészült munkák galériái kategóriánként, valamint előtte/utána átalakulás-projektek.
+- [Rólunk](https://szekoablak.hu/rolunk): a cég története, csapata és értékei.
+- [Kapcsolat](https://szekoablak.hu/kapcsolat): elérhetőségek és ajánlatkérő űrlap.
+
+## Amit fontos tudni (gyakori tévhitek elkerülésére)
+
+- A helyszíni felmérés NEM ingyenes önmagában — az ingyenes árajánlat készítése ingyenes, a felmérés azt követő, egyeztetett lépés.
+- Nem vállalnak kőműves munkát vagy teljes házfelújítást — csak beltéri lejavítást (gipszkarton, festés, burkolás).
+- Nincs országos lefedettség — csak Budapest és kb. 45 km-es körzetében dolgoznak.
+- A válaszidő ajánlatkérésre jellemzően 1-2 munkanap, nem 1 nap.
+
+## Optional
+
+- [Robots.txt](https://szekoablak.hu/robots.txt)
+- [Sitemap](https://szekoablak.hu/sitemap.xml)

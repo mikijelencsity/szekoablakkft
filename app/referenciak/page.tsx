@@ -6,10 +6,16 @@ import Gallery from "@/components/Gallery";
 import Transformations from "@/components/Transformations";
 import { categories } from "@/lib/kepek";
 
+const TITLE = "Referenciák";
+const DESCRIPTION =
+  "Válogatás elkészült ablak-, ajtócsere-, felújítási, festési és burkolási munkáinkból. Valódi projektek, valódi eredmények.";
+
 export const metadata: Metadata = {
-  title: "Referenciák | Szeko Ablak Kft",
-  description:
-    "Válogatás elkészült ablakcsere-, felújítási, festési és burkolási munkáinkból. Valódi projektek, valódi eredmények.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/referenciak" },
+  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/referenciak" },
+  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 export default function ReferenciakPage() {
@@ -20,7 +26,7 @@ export default function ReferenciakPage() {
       <PageHero
         eyebrow="Referenciák"
         title="Valódi projektek, valódi eredmények"
-        subtitle="Válogatás elkészült munkáinkból — ablakcsere, felújítás, festés és burkolás a régió otthonaiban."
+        subtitle="Válogatás elkészült munkáinkból — ablak- és ajtócsere, felújítás, festés és burkolás a régió otthonaiban."
         image="/referenciak/ablak/02.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
@@ -51,7 +57,7 @@ export default function ReferenciakPage() {
             </Reveal>
 
             <Reveal>
-              <Gallery images={cat.images} />
+              <Gallery images={cat.images} title={cat.title} />
             </Reveal>
           </div>
         </section>
@@ -59,7 +65,7 @@ export default function ReferenciakPage() {
 
       <PageCTA
         title="Legyen az Ön otthona a következő referencia."
-        text="Kérjen ingyenes helyszíni felmérést, és beszéljük át a projektjét."
+        text="Kérjen ingyenes árajánlatot, és beszéljük át a projektjét."
       />
     </main>
   );

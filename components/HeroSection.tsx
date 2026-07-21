@@ -24,7 +24,7 @@ const icon = (paths: ReactNode) => (
 
 const CREDENTIALS = [
   {
-    value: "2007",
+    value: "2010",
     label: "Alapítva",
     icon: icon(
       <>
@@ -34,8 +34,8 @@ const CREDENTIALS = [
     ),
   },
   {
-    value: "640+",
-    label: "Befejezett projekt",
+    value: "Ingyenes",
+    label: "Szaktanácsadás",
     icon: icon(
       <>
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -44,7 +44,7 @@ const CREDENTIALS = [
     ),
   },
   {
-    value: "18+ év",
+    value: "16+ év",
     label: "Tapasztalat",
     icon: icon(
       <>
@@ -54,8 +54,8 @@ const CREDENTIALS = [
     ),
   },
   {
-    value: "Teljes körű",
-    label: "Garancia",
+    value: "Gyártói &",
+    label: "Beépítési garancia",
     icon: icon(
       <>
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -194,7 +194,7 @@ export default function HeroSection() {
             className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-white [text-shadow:0_1px_12px_rgba(0,0,0,0.7)] sm:text-[15px]"
           >
             <span className="h-0.5 w-8 rounded-full bg-brand" />
-            Ablak · Redőny · Felújítás — 2007 óta
+            Nyílászáró · Redőny · Felújítás — 2010 óta
           </div>
 
           <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem] [text-shadow:0_2px_18px_rgba(0,0,0,0.75),0_1px_3px_rgba(0,0,0,0.5)]">

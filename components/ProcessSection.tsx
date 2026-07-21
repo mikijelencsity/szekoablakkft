@@ -12,15 +12,15 @@ const steps = [
   },
   {
     n: "02",
-    name: "Helyszíni felmérés",
-    short: "Kiszállunk és pontosan felmérünk.",
-    desc: "Kiszállunk, felmérünk és pontosan megnézzük a munkát — ingyenesen.",
+    name: "Ingyenes árajánlat",
+    short: "Tételes, átlátható árajánlat.",
+    desc: "1-2 munkanapon belül tételes, átlátható árajánlatot kap — ingyenesen, nincs rejtett költség.",
   },
   {
     n: "03",
-    name: "Árajánlat",
-    short: "Tételes, átlátható árajánlat.",
-    desc: "Tételes, átlátható árajánlatot kap. Nincs rejtett költség, nincs nyomás.",
+    name: "Helyszíni felmérés",
+    short: "Egyeztetett időpontban felmérünk.",
+    desc: "Az árajánlat elfogadása után egyeztetünk egy helyszíni felmérésről.",
   },
   {
     n: "04",

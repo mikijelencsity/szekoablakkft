@@ -10,9 +10,11 @@ import { projects, type TrImage } from "@/lib/atalakulasok";
 function Gallery({
   images,
   onOpen,
+  label,
 }: {
   images: TrImage[];
   onOpen: (i: number) => void;
+  label: string;
 }) {
   const n = images.length;
   return (
@@ -31,7 +33,7 @@ function Gallery({
           >
             <Image
               src={img.src}
-              alt=""
+              alt={`${label} kép ${i + 1}`}
               fill
               className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
               sizes="(min-width: 1024px) 22vw, 44vw"
@@ -90,6 +92,7 @@ export default function Transformations({ limit }: { limit?: number }) {
                   <Gallery
                     images={p.before}
                     onOpen={(i) => open(p.before, i)}
+                    label={`${p.title} — előtte`}
                   />
                 </div>
 
@@ -117,7 +120,11 @@ export default function Transformations({ limit }: { limit?: number }) {
                     <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
                     Utána
                   </span>
-                  <Gallery images={p.after} onOpen={(i) => open(p.after, i)} />
+                  <Gallery
+                    images={p.after}
+                    onOpen={(i) => open(p.after, i)}
+                    label={`${p.title} — utána`}
+                  />
                 </div>
               </div>
             </Reveal>

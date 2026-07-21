@@ -6,8 +6,8 @@ import { gsap } from "@/lib/gsap";
 
 const reasons = [
   {
-    title: "18 év, egy csapat",
-    desc: "Ugyanaz a törzscsapat dolgozik együtt közel két évtizede — nincs cserélődő alvállalkozó.",
+    title: "16 év, egy csapat",
+    desc: "Ugyanaz a törzscsapat dolgozik együtt 2010 óta — nincs cserélődő alvállalkozó.",
   },
   {
     title: "Tiszta kivitelezés",

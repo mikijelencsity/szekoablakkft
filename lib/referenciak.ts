@@ -134,6 +134,27 @@ export const categories: RefCategory[] = [
     ]
   },
   {
+    "slug": "ajto",
+    "title": "Ajtók",
+    "images": [
+      {
+        "src": "/referenciak/felujitas/02.webp",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "/referenciak/felujitas/01.webp",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "/referenciak/felujitas/03.webp",
+        "w": 1600,
+        "h": 1200
+      }
+    ]
+  },
+  {
     "slug": "festes",
     "title": "Festés",
     "images": [

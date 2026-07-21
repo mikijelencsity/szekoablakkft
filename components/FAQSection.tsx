@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Mennyibe kerül a munka?",
-    a: "A munka terjedelmétől függ, de mindig átlátható, tételes árajánlatot kap egy ingyenes helyszíni felmérés után — még mielőtt bármilyen munka elkezdődne.",
+    a: "A munka terjedelmétől függ, de mindig átlátható, tételes árajánlatot kap — az ingyenes árajánlat és a helyszíni felmérés után, még mielőtt bármilyen munka elkezdődne.",
   },
   {
     q: "Mennyi ideig tart egy tipikus munka?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Hogy néz ki a folyamat?",
-    a: "Felveszi velünk a kapcsolatot, kiszállunk és helyszíni felmérést végzünk, árajánlatot kap, elvégezzük a munkát, és közös átadással zárunk.",
+    a: "Felveszi velünk a kapcsolatot, ingyenes árajánlatot készítünk, egyeztetünk egy helyszíni felmérésről, majd elvégezzük a munkát, és közös átadással zárunk.",
   },
   {
     q: "Vállalnak garanciát?",
@@ -21,11 +21,25 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section className="angle-top bg-white py-24 lg:py-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-px mx-auto max-w-2xl">
         <p className="text-center text-sm font-medium uppercase tracking-wider text-brand">
           Gyakori kérdések

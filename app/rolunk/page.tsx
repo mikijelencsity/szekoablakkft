@@ -4,19 +4,22 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
 
+const TITLE = "Rólunk";
+const DESCRIPTION =
+  "Több mint 16 éve végezünk ablakcserét, redőny- és felújítási munkákat a régióban. Ismerje meg a csapatot és az értékeinket.";
+
 export const metadata: Metadata = {
-  title: "Rólunk | Szeko Ablak Kft",
-  description:
-    "Több mint 18 éve végezünk ablakcserét, redőny- és felújítási munkákat a régióban. Ismerje meg a csapatot és az értékeinket.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/rolunk" },
+  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/rolunk" },
+  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
-const U = (id: string, w = 1600) =>
-  `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
-
 const stats = [
-  { value: "2007", label: "Alapítva" },
-  { value: "640+", label: "Befejezett projekt" },
-  { value: "18+ év", label: "Tapasztalat" },
+  { value: "2010", label: "Alapítva" },
+  { value: "Ingyenes", label: "Szaktanácsadás" },
+  { value: "16+ év", label: "Tapasztalat" },
   { value: "45 km", label: "Vállalási kör" },
 ];
 
@@ -44,9 +47,9 @@ export default function RolunkPage() {
     <main className="flex flex-1 flex-col">
       <PageHero
         eyebrow="Rólunk"
-        title="18 éve az otthonok szolgálatában"
+        title="16 éve az otthonok szolgálatában"
         subtitle="Egy összeszokott csapat, amely a felméréstől az utolsó ellenőrzésig végigviszi a munkát."
-        image={U("photo-1521791136064-7986c2920216", 2000)}
+        image="/referenciak/felujitas/02.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Rólunk", href: "/rolunk" },
@@ -66,22 +69,22 @@ export default function RolunkPage() {
             </h2>
             <div className="mt-6 flex flex-col gap-4 leading-relaxed text-ink-soft">
               <p>
-                A Szeko Ablak Kft. 2007 óta végez ablakcserét, redőny- és
+                A Szeko Ablak Kft. 2010 óta végez ablakcserét, redőny- és
                 felújítási munkákat a régió otthonaiban. A kezdetek óta ugyanaz
                 a törzscsapat dolgozik együtt — nincs cserélődő alvállalkozó,
                 nincs kiszervezett minőség.
               </p>
               <p>
-                Több mint 640 befejezett projekt tapasztalatával tudjuk, hogy
-                egy jó munka nem a bontással kezdődik, hanem az őszinte
-                tanácsadással és a pontos felméréssel.
+                Több mint 16 év tapasztalatával tudjuk, hogy egy jó munka nem a
+                bontással kezdődik, hanem az őszinte tanácsadással és a pontos
+                felméréssel.
               </p>
             </div>
 
             <ul className="mt-8 flex flex-col gap-3 border-t border-black/10 pt-6">
               {[
-                "Ugyanaz a törzscsapat 2007 óta",
-                "Ingyenes, kötelezettség nélküli felmérés",
+                "Ugyanaz a törzscsapat 2010 óta",
+                "Ingyenes árajánlat, ingyenes szaktanácsadás",
                 "Tételes, átlátható árajánlat — rejtett költségek nélkül",
               ].map((pt) => (
                 <li key={pt} className="flex items-center gap-3 text-ink">
@@ -113,7 +116,7 @@ export default function RolunkPage() {
               sizes="(min-width: 1024px) 45vw, 100vw"
             />
             <div className="absolute bottom-4 left-4 rounded-xl bg-brand px-5 py-3.5 text-white shadow-[0_16px_36px_-12px_rgba(36,87,255,0.6)]">
-              <div className="text-2xl font-bold leading-none">18+ év</div>
+              <div className="text-2xl font-bold leading-none">16+ év</div>
               <p className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-white/85">
                 tapasztalat
               </p>

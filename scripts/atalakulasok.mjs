@@ -20,7 +20,7 @@ const EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif", ".tif",
 
 // Projekt-címek (szerkeszthető — a valódi nevek/helyszínek ide jönnek)
 const META = {
-  "projekt-1": { title: "Családi ház — teljes felújítás", location: "2024" },
+  "projekt-1": { title: "Szoba-kamra felújítás", location: "2024" },
   "projekt-2": { title: "Lakásfelújítás", location: "2023" },
   "projekt-3": { title: "Szobafelújítás", location: "2023" },
 };

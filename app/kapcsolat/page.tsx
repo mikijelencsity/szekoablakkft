@@ -3,10 +3,16 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import QuoteForm from "@/components/QuoteForm";
 
+const TITLE = "Kapcsolat";
+const DESCRIPTION =
+  "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Hívjon minket, írjon e-mailt, vagy töltse ki az ajánlatkérő űrlapot.";
+
 export const metadata: Metadata = {
-  title: "Kapcsolat | Szeko Ablak Kft",
-  description:
-    "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Hívjon minket, írjon e-mailt, vagy töltse ki az ajánlatkérő űrlapot.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/kapcsolat" },
+  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/kapcsolat" },
+  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 const contacts = [
@@ -21,12 +27,12 @@ const contacts = [
   {
     label: "E-mail",
     links: [{ value: "szeko2010@gmail.com", href: "mailto:szeko2010@gmail.com" }],
-    hint: "Válasz 1 munkanapon belül",
+    hint: "Válasz 1-2 munkanapon belül",
   },
   {
     label: "Vállalási terület",
     links: [{ value: "Budapest és 45 km", href: null }],
-    hint: "Ingyenes helyszíni felmérés",
+    hint: "Ingyenes árajánlat",
   },
 ];
 
@@ -36,7 +42,7 @@ export default function KapcsolatPage() {
       <PageHero
         eyebrow="Kapcsolat"
         title="Kérjen ingyenes árajánlatot"
-        subtitle="Töltse ki az űrlapot, vagy keressen minket telefonon — pár napon belül tételes ajánlattal jelentkezünk."
+        subtitle="Töltse ki az űrlapot, vagy keressen minket telefonon — 1-2 munkanapon belül tételes ajánlattal jelentkezünk."
         image="/referenciak/ablak/01.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
@@ -55,8 +61,8 @@ export default function KapcsolatPage() {
               Beszéljük át a projektjét.
             </h2>
             <p className="mt-5 max-w-md leading-relaxed text-ink-soft">
-              Akár egyetlen ablakról, akár teljes felújításról van szó,
-              szívesen segítünk. A felmérés és az árajánlat mindig ingyenes és
+              Akár egyetlen ablakról, akár teljes lejavításról van szó,
+              szívesen segítünk. Az árajánlat mindig ingyenes és
               kötelezettség nélküli.
             </p>
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const SERVICES = [
   "Ablakok",
+  "Ajtók",
   "Redőnyök",
   "Felújítás",
   "Festés",
@@ -34,7 +35,7 @@ const initial: Values = {
 export default function QuoteForm() {
   const [values, setValues] = useState<Values>(initial);
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   const set = <K extends keyof Values>(key: K, val: Values[K]) => {
     setValues((v) => ({ ...v, [key]: val }));
@@ -59,10 +60,17 @@ export default function QuoteForm() {
     evt.preventDefault();
     if (!validate()) return;
     setStatus("sending");
-    // TODO: valódi küldés bekötése (pl. /api/quote route vagy Web3Forms).
-    // Jelenleg csak UI-visszajelzés, backend nélkül.
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("done");
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setStatus("done");
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "done") {
@@ -228,8 +236,14 @@ export default function QuoteForm() {
       >
         {status === "sending" ? "Küldés…" : "Ajánlatkérés elküldése"}
       </button>
+      {status === "error" && (
+        <p className="mt-3 text-sm font-medium text-red-500">
+          Nem sikerült elküldeni az ajánlatkérést. Kérjük, próbálja újra, vagy
+          hívjon minket telefonon.
+        </p>
+      )}
       <p className="mt-3 text-xs text-ink-soft">
-        Ingyenes, kötelezettség nélküli. Válaszidő általában 1 munkanap.
+        Ingyenes, kötelezettség nélküli. Válaszidő általában 1-2 munkanap.
       </p>
     </form>
   );

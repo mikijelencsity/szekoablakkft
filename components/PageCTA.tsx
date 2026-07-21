@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 export default function PageCTA({
   title = "Készen áll a következő projektjére?",
-  text = "Kérjen ingyenes, kötelezettség nélküli helyszíni felmérést. Válaszidő általában 1 munkanap.",
+  text = "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Válaszidő általában 1-2 munkanap.",
 }: {
   title?: string;
   text?: string;
