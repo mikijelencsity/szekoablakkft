@@ -21,7 +21,10 @@ const EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".heic",
 // Szolgáltatás-mappák és a megjelenített címük (sorrend = oldalsorrend)
 const CATEGORIES = [
   { slug: "ablak", title: "Ablakcsere" },
+  { slug: "ajto", title: "Ajtók" },
   { slug: "redony", title: "Redőnyök" },
+  { slug: "szunyoghalo", title: "Szúnyogháló" },
+  { slug: "parkany", title: "Párkány" },
   { slug: "festes", title: "Festés" },
   { slug: "felujitas", title: "Felújítás" },
   { slug: "burkolas", title: "Burkolás" },

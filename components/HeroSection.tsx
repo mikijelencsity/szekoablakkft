@@ -194,7 +194,7 @@ export default function HeroSection() {
             className="mb-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-white [text-shadow:0_1px_12px_rgba(0,0,0,0.7)] sm:text-[15px]"
           >
             <span className="h-0.5 w-8 rounded-full bg-brand" />
-            Nyílászáró · Redőny · Felújítás — 2010 óta
+            Nyílászáró · Redőny · Szúnyogháló · Párkány · Felújítás — 2010 óta
           </div>
 
           <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.4rem] [text-shadow:0_2px_18px_rgba(0,0,0,0.75),0_1px_3px_rgba(0,0,0,0.5)]">

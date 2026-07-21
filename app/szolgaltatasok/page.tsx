@@ -6,7 +6,7 @@ import PageCTA from "@/components/PageCTA";
 
 const TITLE = "Szolgáltatások";
 const DESCRIPTION =
-  "Ablak- és ajtócsere, redőnyök, teljes körű lejavítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.";
+  "Ablak- és ajtócsere, redőnyök, szúnyoghálók, párkányok, teljes körű lejavítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,9 +20,9 @@ const services = [
   {
     n: "01",
     name: "Ablakok",
-    desc: "Energiatakarékos műanyag, alumínium és fa-alu ablakok pontos beépítéssel — kevesebb zaj, kevesebb hőveszteség, alacsonyabb rezsi.",
+    desc: "Energiatakarékos műanyag ablakok pontos beépítéssel — kevesebb zaj, kevesebb hőveszteség, alacsonyabb rezsi.",
     features: [
-      "Műanyag, alumínium és fa-alu profilok",
+      "Műanyag profilok",
       "Hő- és hangszigetelt üvegezés",
       "Egyedi méretek, gyártótól",
       "Beépítés 10 év garanciával",
@@ -39,7 +39,7 @@ const services = [
       "Egyedi méretek, gyártótól",
       "Precíz, réstelen beépítés",
     ],
-    image: "/referenciak/felujitas/02.webp",
+    image: "/referenciak/ajto/02.webp",
   },
   {
     n: "03",
@@ -54,6 +54,28 @@ const services = [
   },
   {
     n: "04",
+    name: "Szúnyogháló",
+    desc: "Egyedi méretű szúnyoghálók ablakra és ajtóra — szabad szellőzés rovarok nélkül.",
+    features: [
+      "Ablakra és ajtóra egyaránt",
+      "Egyedi méretgyártás",
+      "Pattintható és nyíló kivitel",
+    ],
+    image: "/referenciak/szunyoghalo/01.webp",
+  },
+  {
+    n: "05",
+    name: "Párkány",
+    desc: "Kültéri és beltéri ablakpárkányok pontos illesztéssel, az ablakcseréhez igazítva.",
+    features: [
+      "Kültéri és beltéri párkányok",
+      "Egyedi méretek",
+      "Pontos illesztés az ablakhoz",
+    ],
+    image: "/referenciak/parkany/01.webp",
+  },
+  {
+    n: "06",
     name: "Felújítás",
     desc: "Teljes körű lejavítás egy kézből — gipszkarton, festés és burkolás, tiszta munkaterülettel és tartható határidőkkel.",
     features: [
@@ -65,7 +87,7 @@ const services = [
     image: "/referenciak/felujitas/02.webp",
   },
   {
-    n: "05",
+    n: "07",
     name: "Festés",
     desc: "Tiszta, precíz bel- és kültéri festés — pontos élekkel, alapos felületkezeléssel és prémium anyagokkal, gyors kivitelezéssel.",
     features: [
@@ -77,7 +99,7 @@ const services = [
     image: "/referenciak/festes/01.webp",
   },
   {
-    n: "06",
+    n: "08",
     name: "Padlóburkolás",
     desc: "Hideg és meleg burkolatok szakszerű fektetése — laminált, parketta, csempe és kő, tartós, sík aljzatra.",
     features: [

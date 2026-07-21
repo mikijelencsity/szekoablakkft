@@ -20,7 +20,7 @@ const services: Service[] = [
     n: "01",
     name: "Ablakok",
     cat: "ablak",
-    desc: "Energiatakarékos műanyag és alumínium ablakok — kevesebb zaj, kevesebb hőveszteség, alacsonyabb rezsi, pontos beépítéssel.",
+    desc: "Energiatakarékos műanyag ablakok — kevesebb zaj, kevesebb hőveszteség, alacsonyabb rezsi, pontos beépítéssel.",
   },
   {
     n: "02",
@@ -36,18 +36,30 @@ const services: Service[] = [
   },
   {
     n: "04",
+    name: "Szúnyogháló",
+    cat: "szunyoghalo",
+    desc: "Egyedi méretű szúnyoghálók ablakra és ajtóra — szabad szellőzés rovarok nélkül.",
+  },
+  {
+    n: "05",
+    name: "Párkány",
+    cat: "parkany",
+    desc: "Kültéri és beltéri ablakpárkányok pontos illesztéssel, az ablakcseréhez igazítva.",
+  },
+  {
+    n: "06",
     name: "Felújítás",
     cat: "felujitas",
     desc: "Teljes körű lejavítás egy kézből — gipszkarton, festés és burkolás, tiszta munkaterülettel és tartható határidőkkel.",
   },
   {
-    n: "05",
+    n: "07",
     name: "Festés",
     cat: "festes",
     desc: "Tiszta, precíz bel- és kültéri festés — pontos élekkel, prémium anyagokkal, gyors kivitelezéssel.",
   },
   {
-    n: "06",
+    n: "08",
     name: "Padlóburkolás",
     cat: "burkolas",
     desc: "Hideg és meleg burkolatok szakszerű fektetése — laminált, parketta, csempe és kő, tartós, sík aljzatra.",
@@ -119,7 +131,7 @@ export default function ServicesSection() {
           Amit csinálunk
         </span>
         <h2 className="he-fx mx-auto mt-6 max-w-2xl text-[1.9rem] font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl sm:leading-[1.05] lg:text-6xl">
-          Hat szolgáltatás, egy megbízható csapat.
+          Nyolc szolgáltatás, egy megbízható csapat.
         </h2>
       </div>
 

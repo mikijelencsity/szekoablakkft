@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const SERVICES = [
   "Ablakok",
   "Ajtók",
   "Redőnyök",
+  "Szúnyogháló",
+  "Párkány",
   "Felújítás",
   "Festés",
   "Padlóburkolás",
@@ -221,8 +224,16 @@ export default function QuoteForm() {
           className="mt-0.5 h-4 w-4 shrink-0 accent-brand"
         />
         <span>
-          Hozzájárulok, hogy a megadott adataimat az ajánlatadás céljából
-          kezeljék. <span className="text-brand">*</span>
+          Hozzájárulok, hogy a megadott adataimat az{" "}
+          <Link
+            href="/adatkezeles"
+            target="_blank"
+            className="text-brand underline hover:text-brand-dark"
+          >
+            adatkezelési tájékoztatóban
+          </Link>{" "}
+          foglaltak szerint az ajánlatadás céljából kezeljék.{" "}
+          <span className="text-brand">*</span>
         </span>
       </label>
       {errors.consent && (

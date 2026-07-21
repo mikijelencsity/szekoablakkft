@@ -78,7 +78,7 @@ export default function Footer() {
               className="h-8 w-auto"
             />
             <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/50">
-              Nyílászáró · Redőny · Felújítás
+              Nyílászáró · Redőny · Szúnyogháló · Párkány · Felújítás
             </p>
           </div>
 
@@ -163,7 +163,14 @@ export default function Footer() {
           <span>
             © {new Date().getFullYear()} Szeko Ablak Kft. Minden jog fenntartva.
           </span>
-          <span>Adatvédelem · ÁSZF</span>
+          <span className="flex gap-4">
+            <Link href="/adatkezeles" className="hover:text-white">
+              Adatkezelés
+            </Link>
+            <Link href="/impresszum" className="hover:text-white">
+              Impresszum
+            </Link>
+          </span>
         </div>
       </div>
     </footer>

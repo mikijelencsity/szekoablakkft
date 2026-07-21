@@ -103,54 +103,106 @@ export const categories: RefCategory[] = [
     ]
   },
   {
-    "slug": "redony",
-    "title": "Redőnyök",
+    "slug": "ajto",
+    "title": "Ajtók",
     "images": [
       {
-        "src": "/referenciak/redony/01.webp",
-        "w": 640,
-        "h": 480
+        "src": "/referenciak/ajto/01.webp",
+        "w": 721,
+        "h": 1600
       },
       {
-        "src": "/referenciak/redony/02.webp",
-        "w": 1600,
-        "h": 1200
-      },
-      {
-        "src": "/referenciak/redony/03.webp",
-        "w": 1600,
-        "h": 720
-      },
-      {
-        "src": "/referenciak/redony/04.webp",
+        "src": "/referenciak/ajto/02.webp",
         "w": 1200,
         "h": 1600
       },
       {
-        "src": "/referenciak/redony/05.webp",
+        "src": "/referenciak/ajto/03.webp",
         "w": 1200,
         "h": 1600
       }
     ]
   },
   {
-    "slug": "ajto",
-    "title": "Ajtók",
+    "slug": "redony",
+    "title": "Redőnyök",
     "images": [
       {
-        "src": "/referenciak/felujitas/02.webp",
+        "src": "/referenciak/redony/01.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/redony/02.webp",
+        "w": 640,
+        "h": 480
+      },
+      {
+        "src": "/referenciak/redony/03.webp",
         "w": 1600,
         "h": 1200
       },
       {
-        "src": "/referenciak/felujitas/01.webp",
+        "src": "/referenciak/redony/04.webp",
+        "w": 1600,
+        "h": 720
+      },
+      {
+        "src": "/referenciak/redony/05.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/redony/06.webp",
+        "w": 1200,
+        "h": 1600
+      }
+    ]
+  },
+  {
+    "slug": "szunyoghalo",
+    "title": "Szúnyogháló",
+    "images": [
+      {
+        "src": "/referenciak/szunyoghalo/01.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/szunyoghalo/02.webp",
         "w": 1600,
         "h": 1200
       },
       {
-        "src": "/referenciak/felujitas/03.webp",
+        "src": "/referenciak/szunyoghalo/03.webp",
+        "w": 1600,
+        "h": 720
+      },
+      {
+        "src": "/referenciak/szunyoghalo/04.webp",
         "w": 1600,
         "h": 1200
+      }
+    ]
+  },
+  {
+    "slug": "parkany",
+    "title": "Párkány",
+    "images": [
+      {
+        "src": "/referenciak/parkany/01.webp",
+        "w": 1200,
+        "h": 1600
+      },
+      {
+        "src": "/referenciak/parkany/02.webp",
+        "w": 1600,
+        "h": 1200
+      },
+      {
+        "src": "/referenciak/parkany/03.webp",
+        "w": 1200,
+        "h": 1600
       }
     ]
   },
