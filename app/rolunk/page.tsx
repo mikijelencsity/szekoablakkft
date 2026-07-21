@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { value: "2010", label: "Alapítva" },
-  { value: "Ingyenes", label: "Szaktanácsadás" },
+  { value: "1-2 nap", label: "Válasz az árajánlatra" },
   { value: "16+ év", label: "Tapasztalat" },
   { value: "45 km", label: "Vállalási kör" },
 ];

@@ -4,7 +4,10 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const TO_EMAIL = process.env.QUOTE_TO_EMAIL ?? "szeko2010@gmail.com";
-const CC_EMAIL = process.env.QUOTE_CC_EMAIL;
+const CC_EMAILS = (process.env.QUOTE_CC_EMAIL ?? "")
+  .split(",")
+  .map((e) => e.trim())
+  .filter(Boolean);
 
 type QuotePayload = {
   name: string;
@@ -52,7 +55,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: "Szeko Ablak Kft weboldal <onboarding@resend.dev>",
       to: TO_EMAIL,
-      cc: CC_EMAIL ? [CC_EMAIL] : undefined,
+      cc: CC_EMAILS.length > 0 ? CC_EMAILS : undefined,
       replyTo: email || undefined,
       subject: `Új ajánlatkérés — ${name} (${service})`,
       html,
