@@ -72,6 +72,7 @@ const localBusinessSchema = {
   telephone: ["+36202191858", "+36202194514"],
   email: "szeko2010@gmail.com",
   priceRange: "$$",
+  sameAs: ["https://www.facebook.com/szekoablak/"],
   foundingDate: "2010",
   makesOffer: [
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ablakcsere" } },

@@ -128,30 +128,14 @@ export default function Footer() {
             </p>
             <div className="flex gap-2">
               <a
-                href="#"
+                href="https://www.facebook.com/szekoablak/?locale=hu_HU"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-brand"
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M13 22v-8h3l1-4h-4V7.5c0-1 .3-1.5 1.7-1.5H17V2.3C16.5 2.2 15.3 2 14.2 2 11.6 2 10 3.6 10 6.7V10H7v4h3v8z" />
-                </svg>
-              </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white transition-colors hover:bg-brand"
-              >
-                <svg
-                  width="17"
-                  height="17"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
               </a>
             </div>
