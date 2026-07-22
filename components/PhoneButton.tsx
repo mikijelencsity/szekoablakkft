@@ -1,11 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function PhoneButton() {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const footer = document.getElementById("contact");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setHidden(entry.isIntersecting),
+      { rootMargin: "0px 0px 0px 0px" }
+    );
+    observer.observe(footer);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Link
       href="tel:+36202191858"
       aria-label="Hívjon minket: 06 20 219 1858"
-      className="group fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 rounded-full bg-brand py-3.5 pl-4 pr-5 text-sm font-semibold text-white shadow-[0_14px_34px_-8px_rgba(36,87,255,0.6)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark"
+      className={`group fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 rounded-full bg-brand py-3.5 pl-4 pr-5 text-sm font-semibold text-white shadow-[0_14px_34px_-8px_rgba(36,87,255,0.6)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark ${
+        hidden
+          ? "pointer-events-none translate-y-3 opacity-0"
+          : "opacity-100"
+      }`}
     >
       <span className="relative flex h-6 w-6 items-center justify-center">
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/40" />

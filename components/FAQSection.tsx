@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: "Vállalnak garanciát?",
-    a: "Igen — minden beépítési munkára garanciát vállalunk, az anyagokra pedig gyártói garancia vonatkozik. A részletek az árajánlatban szerepelnek.",
+    a: "Igen — az ablakokra és ajtókra 5 év termékgarancia, a beépítésre 1 év garancia vonatkozik. A részletek az árajánlatban szerepelnek.",
   },
 ];
 

@@ -20,7 +20,7 @@ const stats = [
   { value: "2010", label: "Alapítva" },
   { value: "1-2 nap", label: "Válasz az árajánlatra" },
   { value: "16+ év", label: "Tapasztalat" },
-  { value: "45 km", label: "Vállalási kör" },
+  { value: "5 év", label: "Termékgarancia" },
 ];
 
 const values = [
@@ -38,7 +38,7 @@ const values = [
   },
   {
     title: "Garancia",
-    desc: "Minden beépítési munkára garanciát vállalunk, az anyagokra pedig gyártói garancia vonatkozik.",
+    desc: "Az ablakokra és ajtókra 5 év termékgarancia, a beépítésre 1 év garancia vonatkozik.",
   },
 ];
 

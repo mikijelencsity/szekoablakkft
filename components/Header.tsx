@@ -179,7 +179,7 @@ export default function Header() {
                 szeko2010@gmail.com
               </a>
               <span className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-white/40">
-                H–P 8:00–17:00 · Budapest &amp; 45 km
+                H–P 8:00–17:00
               </span>
             </div>
             <Link

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Szeko Ablak Kft",
   },
   description:
-    "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák Budapesten és 45 km-es körzetében. Kérjen ingyenes árajánlatot még ma.",
+    "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák. Kérjen ingyenes árajánlatot még ma.",
   alternates: {
     canonical: "/",
   },
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
     siteName: "Szeko Ablak Kft",
     title: "Szeko Ablak Kft | Nyílászáró, Redőny, Felújítás",
     description:
-      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák Budapesten és 45 km-es körzetében.",
+      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Szeko Ablak Kft | Nyílászáró, Redőny, Felújítás",
     description:
-      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák Budapesten és 45 km-es körzetében.",
+      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák.",
     images: [OG_IMAGE.url],
   },
 };
@@ -72,19 +72,13 @@ const localBusinessSchema = {
   telephone: ["+36202191858", "+36202194514"],
   email: "szeko2010@gmail.com",
   priceRange: "$$",
-  areaServed: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      addressCountry: "HU",
-    },
-    name: "Budapest és 45 km-es körzete",
-  },
   foundingDate: "2010",
   makesOffer: [
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ablakcsere" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ajtócsere" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Redőnyszerelés" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Szúnyogháló" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Párkány" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Teljes körű lejavítás" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Festés" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Padlóburkolás" } },

@@ -29,11 +29,6 @@ const contacts = [
     links: [{ value: "szeko2010@gmail.com", href: "mailto:szeko2010@gmail.com" }],
     hint: "Válasz 1-2 munkanapon belül",
   },
-  {
-    label: "Vállalási terület",
-    links: [{ value: "Budapest és 45 km", href: null }],
-    hint: "Ingyenes árajánlat",
-  },
 ];
 
 export default function KapcsolatPage() {
