@@ -9,6 +9,8 @@ Ez a fájl AI rendszereknek (ChatGPT, Claude, Perplexity, Gemini és hasonló as
 - Név: Szeko Ablak Kft
 - Alapítva: 2010
 - Tapasztalat: 16+ év, változatlan törzscsapattal
+- Székhely (cégjegyzék szerint): 6346 Sükösd, Dózsa György út 285. (Bács-Kiskun vármegye, Bajai járás)
+- Fő szolgáltatási terület: Baja és környéke, valamint egész Bács-Kiskun vármegye — Kalocsa, Kecskemét, Dunapataj, Hajós, Nemesnádudvar, Érsekcsanád, Dusnok
 - Telefon: +36 20 219 1858, +36 20 219 4514
 - E-mail: szeko2010@gmail.com
 - Facebook: https://www.facebook.com/szekoablak/
@@ -17,14 +19,14 @@ Ez a fájl AI rendszereknek (ChatGPT, Claude, Perplexity, Gemini és hasonló as
 
 ## Szolgáltatások
 
-- [Ablakcsere](https://szekoablak.hu/szolgaltatasok): energiatakarékos műanyag ablakok, egyedi méretben. 5 év termékgarancia, 1 év beépítési garancia.
-- [Ajtócsere](https://szekoablak.hu/szolgaltatasok): beltéri és bejárati ajtók pontos, réstelen beépítéssel. 5 év termékgarancia, 1 év beépítési garancia.
-- [Redőnyszerelés](https://szekoablak.hu/szolgaltatasok): motoros és kézi redőnyök.
-- [Szúnyogháló](https://szekoablak.hu/szolgaltatasok): egyedi méretű szúnyoghálók ablakra és ajtóra.
-- [Párkány](https://szekoablak.hu/szolgaltatasok): kültéri és beltéri ablakpárkányok, az ablakcseréhez igazítva.
-- [Teljes körű lejavítás](https://szekoablak.hu/szolgaltatasok): gipszkartonozás, festés, glettelés és burkolás egy kézből — nem tartalmaz kőműves/szerkezeti munkát.
-- [Festés](https://szekoablak.hu/szolgaltatasok): bel- és kültéri festés, precíz élekkel és felületkezeléssel.
-- [Padlóburkolás](https://szekoablak.hu/szolgaltatasok): laminált, parketta, csempe és kőburkolat lerakása, aljzatkiegyenlítéssel.
+- [Ablakcsere](https://szekoablak.hu/szolgaltatasok/ablak): energiatakarékos műanyag ablakok, egyedi méretben. 5 év termékgarancia, 1 év beépítési garancia.
+- [Ajtócsere](https://szekoablak.hu/szolgaltatasok/ajto): beltéri és bejárati ajtók pontos, réstelen beépítéssel. 5 év termékgarancia, 1 év beépítési garancia.
+- [Redőnyszerelés](https://szekoablak.hu/szolgaltatasok/redony): motoros és kézi redőnyök.
+- [Szúnyogháló](https://szekoablak.hu/szolgaltatasok/szunyoghalo): egyedi méretű szúnyoghálók ablakra és ajtóra.
+- [Párkány](https://szekoablak.hu/szolgaltatasok/parkany): kültéri és beltéri ablakpárkányok, az ablakcseréhez igazítva.
+- [Teljes körű lejavítás](https://szekoablak.hu/szolgaltatasok/felujitas): gipszkartonozás, festés, glettelés és burkolás egy kézből — nem tartalmaz kőműves/szerkezeti munkát.
+- [Festés](https://szekoablak.hu/szolgaltatasok/festes): bel- és kültéri festés, precíz élekkel és felületkezeléssel.
+- [Padlóburkolás](https://szekoablak.hu/szolgaltatasok/burkolas): laminált, parketta, csempe és kőburkolat lerakása, aljzatkiegyenlítéssel.
 
 ## Hogyan dolgoznak
 
@@ -39,7 +41,7 @@ Garancia: az ablakokra és ajtókra 5 év termékgarancia, a beépítésre 1 év
 ## Oldalak
 
 - [Főoldal](https://szekoablak.hu/): bemutatkozás, szolgáltatások áttekintése, referenciák, gyakori kérdések.
-- [Szolgáltatások](https://szekoablak.hu/szolgaltatasok): mind a nyolc szolgáltatás (ablak, ajtó, redőny, szúnyogháló, párkány, felújítás, festés, burkolás) részletesen.
+- [Szolgáltatások](https://szekoablak.hu/szolgaltatasok): mind a nyolc szolgáltatás (ablak, ajtó, redőny, szúnyogháló, párkány, felújítás, festés, burkolás) áttekintése, saját aloldallal mindegyikhez (lásd fent, "Szolgáltatások" pontban a linkeket).
 - [Referenciák](https://szekoablak.hu/referenciak): elkészült munkák galériái kategóriánként, valamint előtte/utána átalakulás-projektek.
 - [Rólunk](https://szekoablak.hu/rolunk): a cég története, csapata és értékei.
 - [Kapcsolat](https://szekoablak.hu/kapcsolat): elérhetőségek és ajánlatkérő űrlap.

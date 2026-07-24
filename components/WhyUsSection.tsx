@@ -65,7 +65,7 @@ export default function WhyUsSection() {
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto">
           <div ref={imageRef} className="absolute inset-0 -top-[6%] h-[112%] w-full">
             <Image
-              src="/referenciak/felujitas/10.webp"
+              src="/referenciak/felujitas/felujitas-10.webp"
               alt="Elkészült felújítás"
               fill
               className="object-cover"

@@ -20,6 +20,7 @@ type Values = {
   phone: string;
   email: string;
   service: string;
+  location: string;
   message: string;
   consent: boolean;
 };
@@ -31,6 +32,7 @@ const initial: Values = {
   phone: "",
   email: "",
   service: "",
+  location: "",
   message: "",
   consent: false,
 };
@@ -200,6 +202,20 @@ export default function QuoteForm() {
             <p className="mt-1.5 text-xs text-red-500">{errors.service}</p>
           )}
         </div>
+      </div>
+
+      <div className="mt-5">
+        <label htmlFor="q-location" className="mb-1.5 block text-sm font-medium text-ink">
+          Honnan ír?
+        </label>
+        <input
+          id="q-location"
+          type="text"
+          value={values.location}
+          onChange={(e) => set("location", e.target.value)}
+          placeholder="pl. Baja, vagy a munka helyszíne szerinti település"
+          className={`${inputBase} border-black/10`}
+        />
       </div>
 
       <div className="mt-5">

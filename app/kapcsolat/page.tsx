@@ -38,7 +38,7 @@ export default function KapcsolatPage() {
         eyebrow="Kapcsolat"
         title="Kérjen ingyenes árajánlatot"
         subtitle="Töltse ki az űrlapot, vagy keressen minket telefonon — 1-2 munkanapon belül tételes ajánlattal jelentkezünk."
-        image="/referenciak/ablak/01.webp"
+        image="/referenciak/ablak/ablak-01.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Kapcsolat", href: "/kapcsolat" },

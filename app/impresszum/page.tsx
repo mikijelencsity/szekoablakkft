@@ -18,7 +18,7 @@ export default function ImpresszumPage() {
       <PageHero
         eyebrow="Jogi információk"
         title="Impresszum"
-        image="/referenciak/ablak/13.webp"
+        image="/referenciak/ablak/ablak-13.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Impresszum", href: "/impresszum" },

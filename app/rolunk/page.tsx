@@ -49,7 +49,7 @@ export default function RolunkPage() {
         eyebrow="Rólunk"
         title="16 éve az otthonok szolgálatában"
         subtitle="Egy összeszokott csapat, amely a felméréstől az utolsó ellenőrzésig végigviszi a munkát."
-        image="/referenciak/felujitas/02.webp"
+        image="/referenciak/felujitas/felujitas-02.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Rólunk", href: "/rolunk" },
@@ -109,7 +109,7 @@ export default function RolunkPage() {
 
           <Reveal className="relative min-h-[360px] overflow-hidden rounded-2xl shadow-[0_26px_54px_-28px_rgba(17,23,32,0.4)] lg:min-h-0">
             <Image
-              src="/referenciak/ablak/06.webp"
+              src="/referenciak/ablak/ablak-06.webp"
               alt="Szeko Ablak Kft munka"
               fill
               className="object-cover"

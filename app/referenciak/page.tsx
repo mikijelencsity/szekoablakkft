@@ -27,7 +27,7 @@ export default function ReferenciakPage() {
         eyebrow="Referenciák"
         title="Valódi projektek, valódi eredmények"
         subtitle="Válogatás elkészült munkáinkból — ablak- és ajtócsere, felújítás, festés és burkolás a régió otthonaiban."
-        image="/referenciak/ablak/02.webp"
+        image="/referenciak/ablak/ablak-02.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Referenciák", href: "/referenciak" },

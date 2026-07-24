@@ -14,6 +14,7 @@ type QuotePayload = {
   phone: string;
   email: string;
   service: string;
+  location: string;
   message: string;
 };
 
@@ -36,6 +37,7 @@ export async function POST(request: Request) {
   const phone = (body.phone ?? "").trim();
   const email = (body.email ?? "").trim();
   const service = (body.service ?? "").trim();
+  const location = (body.location ?? "").trim();
   const message = (body.message ?? "").trim();
 
   if (name.length < 2 || phone.replace(/[^\d+]/g, "").length < 6 || !service) {
@@ -48,6 +50,7 @@ export async function POST(request: Request) {
     <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
     <p><strong>E-mail:</strong> ${escapeHtml(email || "—")}</p>
     <p><strong>Szolgáltatás:</strong> ${escapeHtml(service)}</p>
+    <p><strong>Honnan ír:</strong> ${escapeHtml(location || "—")}</p>
     <p><strong>Üzenet:</strong><br/>${escapeHtml(message || "—").replace(/\n/g, "<br/>")}</p>
   `;
 

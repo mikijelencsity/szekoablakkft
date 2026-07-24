@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 
-const faqs = [
+export type FAQItem = { q: string; a: string };
+
+const defaultFaqs: FAQItem[] = [
   {
     q: "Mennyibe kerül a munka?",
     a: "A munka terjedelmétől függ, de mindig átlátható, tételes árajánlatot kap — az ingyenes árajánlat és a helyszíni felmérés után, még mielőtt bármilyen munka elkezdődne.",
@@ -21,31 +23,43 @@ const faqs = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: { "@type": "Answer", text: faq.a },
-  })),
-};
-
-export default function FAQSection() {
+export default function FAQSection({
+  eyebrow = "Gyakori kérdések",
+  title = "Mielőtt kérdezné, válaszolunk.",
+  faqs = defaultFaqs,
+  includeSchema = true,
+}: {
+  eyebrow?: string;
+  title?: string;
+  faqs?: FAQItem[];
+  includeSchema?: boolean;
+}) {
   const [open, setOpen] = useState<number | null>(0);
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
 
   return (
     <section className="angle-top bg-white py-24 lg:py-32">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {includeSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <div className="container-px mx-auto max-w-2xl">
         <p className="text-center text-sm font-medium uppercase tracking-wider text-brand">
-          Gyakori kérdések
+          {eyebrow}
         </p>
         <h2 className="mt-4 text-center text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
-          Mielőtt kérdezné, válaszolunk.
+          {title}
         </h2>
 
         <div className="mt-12 flex flex-col divide-y divide-black/10 border-t border-black/10">

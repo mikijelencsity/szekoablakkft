@@ -7,6 +7,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
+import CookieConsent from "@/components/CookieConsent";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const satoshi = Manrope({
   variable: "--font-satoshi",
@@ -74,6 +76,26 @@ const localBusinessSchema = {
   priceRange: "$$",
   sameAs: ["https://www.facebook.com/szekoablak/"],
   foundingDate: "2010",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Dózsa György út 285.",
+    addressLocality: "Sükösd",
+    postalCode: "6346",
+    addressRegion: "Bács-Kiskun",
+    addressCountry: "HU",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 46.2833,
+    longitude: 18.9667,
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Bács-Kiskun vármegye" },
+    { "@type": "City", name: "Baja" },
+    { "@type": "City", name: "Kalocsa" },
+    { "@type": "City", name: "Kecskemét" },
+    { "@type": "City", name: "Sükösd" },
+  ],
   makesOffer: [
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ablakcsere" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ajtócsere" } },
@@ -106,6 +128,8 @@ export default function RootLayout({
           <Footer />
           <PhoneButton />
         </LenisProvider>
+        <CookieConsent />
+        <GoogleAnalytics />
       </body>
     </html>
   );

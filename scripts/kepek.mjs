@@ -76,7 +76,7 @@ async function main() {
     const images = [];
     let i = 1;
     for (const f of files) {
-      const name = `${pad(i)}.webp`;
+      const name = `${cat.slug}-${pad(i)}.webp`;
       const dims = await convert(path.join(dir, f), path.join(outDir, name));
       images.push({ src: `/referenciak/${cat.slug}/${name}`, w: dims.w, h: dims.h });
       console.log(`  ${cat.slug}/${name}  ← ${f} (${dims.orig})`);

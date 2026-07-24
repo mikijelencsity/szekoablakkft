@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 
 const TITLE = "Adatkezelési tájékoztató";
 const DESCRIPTION =
@@ -18,7 +19,7 @@ export default function AdatkezelesPage() {
       <PageHero
         eyebrow="Jogi információk"
         title="Adatkezelési tájékoztató"
-        image="/referenciak/ablak/13.webp"
+        image="/referenciak/ablak/ablak-13.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Adatkezelés", href: "/adatkezeles" },
@@ -198,12 +199,23 @@ export default function AdatkezelesPage() {
                 8. Sütik (cookie-k)
               </h2>
               <p>
-                A weboldal jelenleg nem használ statisztikai vagy
-                marketing célú sütiket. Amennyiben a jövőben ilyen
-                eszközök (pl. látogatottság-mérés) bevezetésre kerülnek,
-                ezt a tájékoztatót frissítjük, és — ahol jogszabály
-                előírja — előzetes hozzájárulást kérünk.
+                A weboldal működéséhez feltétlenül szükséges sütiket
+                használ (pl. a süti-hozzájárulás elmentéséhez), ezekhez
+                nem szükséges külön hozzájárulás.
               </p>
+              <p className="mt-3">
+                Emellett, kizárólag az Ön előzetes hozzájárulása esetén,
+                a weboldal a Google Analytics (Google Ireland Limited)
+                látogatottság-mérő szolgáltatását használja, amely
+                anonimizált statisztikai adatokat gyűjt arról, hogyan
+                használják a látogatók az oldalt (pl. mely oldalakat
+                nézik meg, honnan érkeztek). Ez a mérőkód csak akkor
+                töltődik be, ha az oldal alján megjelenő sávban az
+                &bdquo;Elfogadom&rdquo; gombra kattint — hozzájárulás
+                nélkül nem fut. A hozzájárulását bármikor visszavonhatja
+                vagy módosíthatja az alábbi gombbal.
+              </p>
+              <CookieSettingsButton />
             </div>
 
             <p className="text-sm text-ink-soft/70">

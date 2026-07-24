@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 const services = [
   {
     n: "01",
+    slug: "ablak",
     name: "Ablakok",
     desc: "Energiatakarékos műanyag ablakok pontos beépítéssel — kevesebb zaj, kevesebb hőveszteség, alacsonyabb rezsi.",
     features: [
@@ -27,10 +29,11 @@ const services = [
       "Egyedi méretek, gyártótól",
       "5 év termékgarancia, 1 év beépítési garancia",
     ],
-    image: "/referenciak/ablak/04.webp",
+    image: "/referenciak/ablak/ablak-04.webp",
   },
   {
     n: "02",
+    slug: "ajto",
     name: "Ajtók",
     desc: "Beltéri és bejárati ajtók pontos beépítéssel — biztonság, hangszigetelés és stílus egy kézből.",
     features: [
@@ -39,10 +42,11 @@ const services = [
       "Egyedi méretek, gyártótól",
       "5 év termékgarancia, 1 év beépítési garancia",
     ],
-    image: "/referenciak/ajto/02.webp",
+    image: "/referenciak/ajto/ajto-02.webp",
   },
   {
     n: "03",
+    slug: "redony",
     name: "Redőnyök",
     desc: "Redőnyök a biztonságért, a fényszabályozásért és a nyári hővédelemért.",
     features: [
@@ -50,10 +54,11 @@ const services = [
       "Alumínium és műanyag lamellák",
       "Szúnyogháló és árnyékolás",
     ],
-    image: "/referenciak/redony/01.webp",
+    image: "/referenciak/redony/redony-01.webp",
   },
   {
     n: "04",
+    slug: "szunyoghalo",
     name: "Szúnyogháló",
     desc: "Egyedi méretű szúnyoghálók ablakra és ajtóra — szabad szellőzés rovarok nélkül.",
     features: [
@@ -61,10 +66,11 @@ const services = [
       "Egyedi méretgyártás",
       "Pattintható és nyíló kivitel",
     ],
-    image: "/referenciak/szunyoghalo/01.webp",
+    image: "/referenciak/szunyoghalo/szunyoghalo-01.webp",
   },
   {
     n: "05",
+    slug: "parkany",
     name: "Párkány",
     desc: "Kültéri és beltéri ablakpárkányok pontos illesztéssel, az ablakcseréhez igazítva.",
     features: [
@@ -72,10 +78,11 @@ const services = [
       "Egyedi méretek",
       "Pontos illesztés az ablakhoz",
     ],
-    image: "/referenciak/parkany/01.webp",
+    image: "/referenciak/parkany/parkany-01.webp",
   },
   {
     n: "06",
+    slug: "felujitas",
     name: "Felújítás",
     desc: "Teljes körű lejavítás egy kézből — gipszkarton, festés és burkolás, tiszta munkaterülettel és tartható határidőkkel.",
     features: [
@@ -84,10 +91,11 @@ const services = [
       "Padló- és falburkolás",
       "Tiszta munkaterület, fix határidő",
     ],
-    image: "/referenciak/felujitas/02.webp",
+    image: "/referenciak/felujitas/felujitas-02.webp",
   },
   {
     n: "07",
+    slug: "festes",
     name: "Festés",
     desc: "Tiszta, precíz bel- és kültéri festés — pontos élekkel, alapos felületkezeléssel és prémium anyagokkal, gyors kivitelezéssel.",
     features: [
@@ -96,10 +104,11 @@ const services = [
       "Precíz élek, alapos takarás",
       "Prémium festékek",
     ],
-    image: "/referenciak/festes/01.webp",
+    image: "/referenciak/festes/festes-01.webp",
   },
   {
     n: "08",
+    slug: "burkolas",
     name: "Padlóburkolás",
     desc: "Hideg és meleg burkolatok szakszerű fektetése — laminált, parketta, csempe és kő, tartós, sík aljzatra.",
     features: [
@@ -108,7 +117,7 @@ const services = [
       "Aljzatkiegyenlítés",
       "Tartós, sík felület",
     ],
-    image: "/referenciak/burkolas/01.webp",
+    image: "/referenciak/burkolas/burkolas-01.webp",
   },
 ];
 
@@ -119,7 +128,7 @@ export default function SzolgaltatasokPage() {
         eyebrow="Szolgáltatások"
         title="Amit egy kézből elvégzünk"
         subtitle="Ablaktól a padlóig — egy megbízható csapat, tiszta kivitelezés és garancia minden munkára."
-        image="/referenciak/ablak/13.webp"
+        image="/referenciak/ablak/ablak-13.webp"
         crumbs={[
           { label: "Főoldal", href: "/" },
           { label: "Szolgáltatások", href: "/szolgaltatasok" },
@@ -142,7 +151,7 @@ export default function SzolgaltatasokPage() {
                 >
                   <Image
                     src={s.image}
-                    alt={s.name}
+                    alt={`${s.name} — Szeko Ablak Kft referencia`}
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 48vw, 100vw"
@@ -181,6 +190,13 @@ export default function SzolgaltatasokPage() {
                       </li>
                     ))}
                   </ul>
+                  <Link
+                    href={`/szolgaltatasok/${s.slug}`}
+                    className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-brand transition-colors hover:text-brand-dark"
+                  >
+                    Részletek — {s.name.toLowerCase()}
+                    <span aria-hidden>→</span>
+                  </Link>
                 </div>
               </Reveal>
             );

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap } from "@/lib/gsap";
 
-const IMAGE = "/referenciak/ablak/17.webp";
+const IMAGE = "/referenciak/ablak/ablak-17.webp";
 
 const COLS = 4;
 const ROWS = 2;

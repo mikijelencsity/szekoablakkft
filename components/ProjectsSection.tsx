@@ -8,17 +8,17 @@ import { gsap } from "@/lib/gsap";
 const projects = [
   {
     title: "Ablakcsere",
-    image: "/referenciak/ablak/13.webp",
+    image: "/referenciak/ablak/ablak-13.webp",
     size: "lg:col-span-2 lg:row-span-2",
   },
   {
     title: "Felújítás",
-    image: "/referenciak/felujitas/02.webp",
+    image: "/referenciak/felujitas/felujitas-02.webp",
     size: "",
   },
   {
     title: "Festés",
-    image: "/referenciak/festes/01.webp",
+    image: "/referenciak/festes/festes-01.webp",
     size: "",
   },
 ];
