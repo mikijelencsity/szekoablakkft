@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
 import CookieConsent from "@/components/CookieConsent";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleTagManager from "@/components/GoogleTagManager";
 
 const satoshi = Manrope({
   variable: "--font-satoshi",
@@ -116,6 +116,14 @@ export default function RootLayout({
   return (
     <html lang="hu" className={`${satoshi.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-ink">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NWM2FD3Z"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -129,7 +137,7 @@ export default function RootLayout({
           <PhoneButton />
         </LenisProvider>
         <CookieConsent />
-        <GoogleAnalytics />
+        <GoogleTagManager />
       </body>
     </html>
   );

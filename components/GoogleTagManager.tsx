@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import Script from "next/script";
 import { CONSENT_EVENT, type ConsentValue, getConsent } from "@/lib/consent";
 
-const GA_ID = "G-9LRTHS4WN0";
+const GTM_ID = "GTM-NWM2FD3Z";
 
-export default function GoogleAnalytics() {
+export default function GoogleTagManager() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
@@ -24,19 +24,10 @@ export default function GoogleAnalytics() {
   if (!enabled) return null;
 
   return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="ga4-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
-        `}
-      </Script>
-    </>
+    <Script id="gtm-init" strategy="afterInteractive">
+      {`
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');
+      `}
+    </Script>
   );
 }

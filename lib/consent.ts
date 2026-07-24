@@ -1,5 +1,5 @@
 // Egyszerű süti-hozzájárulás állapot localStorage-ban.
-// Az analitikai szkript (GoogleAnalytics.tsx) csak "accepted" állapotnál töltődik be.
+// Az analitikai szkript (GoogleTagManager.tsx) csak "accepted" állapotnál töltődik be.
 
 export const CONSENT_KEY = "szeko-cookie-consent";
 export const CONSENT_EVENT = "szeko-cookie-consent-changed";

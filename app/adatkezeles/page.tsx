@@ -205,7 +205,8 @@ export default function AdatkezelesPage() {
               </p>
               <p className="mt-3">
                 Emellett, kizárólag az Ön előzetes hozzájárulása esetén,
-                a weboldal a Google Analytics (Google Ireland Limited)
+                a weboldal a Google Tag Manager (Google Ireland Limited)
+                címkekezelő rendszerén keresztül a Google Analytics
                 látogatottság-mérő szolgáltatását használja, amely
                 anonimizált statisztikai adatokat gyűjt arról, hogyan
                 használják a látogatók az oldalt (pl. mely oldalakat
