@@ -7,9 +7,9 @@ import Transformations from "@/components/Transformations";
 import { categories } from "@/lib/kepek";
 import { ogImage, twitterImage } from "@/lib/seo";
 
-const TITLE = "Referenciák";
+const TITLE = "Referenciák Baján és környékén";
 const DESCRIPTION =
-  "Válogatás elkészült ablak-, ajtócsere-, felújítási, festési és burkolási munkáinkból. Valódi projektek, valódi eredmények.";
+  "Válogatás elkészült ablak-, ajtócsere-, felújítási, festési és burkolási munkáinkból Baján és Bács-Kiskun megyében. Valódi projektek, valódi eredmények.";
 
 export const metadata: Metadata = {
   title: TITLE,

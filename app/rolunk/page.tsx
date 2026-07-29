@@ -5,9 +5,9 @@ import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
 import { ogImage, twitterImage } from "@/lib/seo";
 
-const TITLE = "Rólunk";
+const TITLE = "Rólunk – ablakos csapat Baján";
 const DESCRIPTION =
-  "Több mint 16 éve végezünk ablakcserét, redőny- és felújítási munkákat a régióban. Ismerje meg a csapatot és az értékeinket.";
+  "Több mint 16 éve végezünk ablakcserét, redőny- és felújítási munkákat Baján és Bács-Kiskun megyében. Ismerje meg a csapatot és az értékeinket.";
 
 export const metadata: Metadata = {
   title: TITLE,

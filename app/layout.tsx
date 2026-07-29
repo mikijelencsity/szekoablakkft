@@ -20,11 +20,11 @@ const satoshi = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Szeko Ablak Kft | Nyílászáró, Redőny, Felújítás",
+    default: "Nyílászáró, redőny, felújítás Baján | Szeko Ablak Kft",
     template: "%s | Szeko Ablak Kft",
   },
   description:
-    "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák. Kérjen ingyenes árajánlatot még ma.",
+    "Ablakcsere, ajtócsere, redőny és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat, 5 év garancia. Kérjen ingyenes árajánlatot.",
   alternates: {
     canonical: "/",
   },
@@ -34,16 +34,16 @@ export const metadata: Metadata = {
     locale: "hu_HU",
     url: SITE_URL,
     siteName: "Szeko Ablak Kft",
-    title: "Szeko Ablak Kft | Nyílászáró, Redőny, Felújítás",
+    title: "Nyílászáró, redőny, felújítás Baján | Szeko Ablak Kft",
     description:
-      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák.",
+      "Ablakcsere, ajtócsere, redőny és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat, 5 év garancia.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Szeko Ablak Kft | Nyílászáró, Redőny, Felújítás",
+    title: "Nyílászáró, redőny, felújítás Baján | Szeko Ablak Kft",
     description:
-      "Gyors, megbízható és magas minőségű nyílászárócsere, redőny, felújítás és építőipari munkák.",
+      "Ablakcsere, ajtócsere, redőny és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat, 5 év garancia.",
     images: [OG_IMAGE.url],
   },
 };

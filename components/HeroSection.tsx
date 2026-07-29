@@ -5,7 +5,7 @@ import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 
 // Külön kép mobilra (álló, éles) és laptopra (fekvő, látványos oromfal).
-const HEADLINE = ["Megbízható kivitelezés,", "látható minőségben."];
+const HEADLINE = ["Megbízható kivitelezés Baján,", "látható minőségben."];
 
 const icon = (paths: ReactNode) => (
   <svg

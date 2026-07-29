@@ -4,9 +4,9 @@ import Reveal from "@/components/Reveal";
 import QuoteForm from "@/components/QuoteForm";
 import { ogImage, twitterImage } from "@/lib/seo";
 
-const TITLE = "Kapcsolat";
+const TITLE = "Kapcsolat és árajánlat Baján";
 const DESCRIPTION =
-  "Kérjen ingyenes, kötelezettség nélküli árajánlatot. Hívjon minket, írjon e-mailt, vagy töltse ki az ajánlatkérő űrlapot.";
+  "Kérjen ingyenes, kötelezettség nélküli árajánlatot ablakcserére, redőnyre vagy felújításra Baján és Bács-Kiskun megyében. Hívjon, írjon, vagy töltse ki az űrlapot.";
 
 export const metadata: Metadata = {
   title: TITLE,

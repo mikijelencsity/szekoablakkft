@@ -6,9 +6,9 @@ import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
 import { ogImage, twitterImage } from "@/lib/seo";
 
-const TITLE = "Szolgáltatások";
+const TITLE = "Szolgáltatások Baján";
 const DESCRIPTION =
-  "Ablak- és ajtócsere, redőnyök, szúnyoghálók, párkányok, teljes körű lejavítás, festés és padlóburkolás egy megbízható csapattól. Nézze meg részletes szolgáltatásainkat.";
+  "Ablak- és ajtócsere, redőny, szúnyogháló, párkány, teljes körű lejavítás, festés és padlóburkolás Baján és Bács-Kiskun megyében, egy megbízható csapattól.";
 
 export const metadata: Metadata = {
   title: TITLE,
