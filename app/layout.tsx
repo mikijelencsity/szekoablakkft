@@ -82,6 +82,20 @@ const localBusinessSchema = {
     latitude: 46.2833,
     longitude: 18.9667,
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "00:00",
+    },
+  ],
   areaServed: [
     { "@type": "AdministrativeArea", name: "Bács-Kiskun vármegye" },
     { "@type": "City", name: "Baja" },
