@@ -54,6 +54,7 @@ const localBusinessSchema = {
   name: "Szeko Ablak Kft",
   url: SITE_URL,
   image: `${SITE_URL}/og-image.jpg`,
+  logo: `${SITE_URL}/szeko-logo.png`,
   telephone: ["+36202191858", "+36202194514"],
   email: "szeko2010@gmail.com",
   priceRange: "$$",
