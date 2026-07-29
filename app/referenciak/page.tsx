@@ -5,6 +5,7 @@ import PageCTA from "@/components/PageCTA";
 import Gallery from "@/components/Gallery";
 import Transformations from "@/components/Transformations";
 import { categories } from "@/lib/kepek";
+import { ogImage, twitterImage } from "@/lib/seo";
 
 const TITLE = "Referenciák";
 const DESCRIPTION =
@@ -14,8 +15,13 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/referenciak" },
-  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/referenciak" },
-  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
+  openGraph: {
+    ...ogImage,
+    title: `${TITLE} | Szeko Ablak Kft`,
+    description: DESCRIPTION,
+    url: "/referenciak",
+  },
+  twitter: { ...twitterImage, title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 export default function ReferenciakPage() {

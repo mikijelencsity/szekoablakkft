@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
+import { ogImage, twitterImage } from "@/lib/seo";
 
 const TITLE = "Rólunk";
 const DESCRIPTION =
@@ -12,8 +13,13 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/rolunk" },
-  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/rolunk" },
-  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
+  openGraph: {
+    ...ogImage,
+    title: `${TITLE} | Szeko Ablak Kft`,
+    description: DESCRIPTION,
+    url: "/rolunk",
+  },
+  twitter: { ...twitterImage, title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 const stats = [

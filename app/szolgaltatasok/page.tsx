@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import PageCTA from "@/components/PageCTA";
+import { ogImage, twitterImage } from "@/lib/seo";
 
 const TITLE = "Szolgáltatások";
 const DESCRIPTION =
@@ -13,8 +14,13 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/szolgaltatasok" },
-  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/szolgaltatasok" },
-  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
+  openGraph: {
+    ...ogImage,
+    title: `${TITLE} | Szeko Ablak Kft`,
+    description: DESCRIPTION,
+    url: "/szolgaltatasok",
+  },
+  twitter: { ...twitterImage, title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 const services = [

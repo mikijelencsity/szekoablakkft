@@ -9,20 +9,13 @@ import Footer from "@/components/Footer";
 import PhoneButton from "@/components/PhoneButton";
 import CookieConsent from "@/components/CookieConsent";
 import GoogleTagManager from "@/components/GoogleTagManager";
+import { SITE_URL, OG_IMAGE } from "@/lib/seo";
 
 const satoshi = Manrope({
   variable: "--font-satoshi",
   subsets: ["latin"],
   weight: ["500", "700"],
 });
-
-const SITE_URL = "https://szekoablak.hu";
-const OG_IMAGE = {
-  url: "/og-image.jpg",
-  width: 1200,
-  height: 630,
-  alt: "Szeko Ablak Kft — Nyílászáró, Redőny, Felújítás",
-};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

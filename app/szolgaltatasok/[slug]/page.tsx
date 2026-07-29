@@ -8,8 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import Gallery from "@/components/Gallery";
 import { services, service } from "@/lib/szolgaltatasok-adat";
 import { category, firstSrc } from "@/lib/kepek";
-
-const SITE_URL = "https://szekoablak.hu";
+import { SITE_URL, ogImage, twitterImage } from "@/lib/seo";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -29,11 +28,16 @@ export async function generateMetadata({
     description: s.metaDescription,
     alternates: { canonical: `/szolgaltatasok/${s.slug}` },
     openGraph: {
+      ...ogImage,
       title: `${s.seoTitle} | Szeko Ablak Kft`,
       description: s.metaDescription,
       url: `/szolgaltatasok/${s.slug}`,
     },
-    twitter: { title: `${s.seoTitle} | Szeko Ablak Kft`, description: s.metaDescription },
+    twitter: {
+      ...twitterImage,
+      title: `${s.seoTitle} | Szeko Ablak Kft`,
+      description: s.metaDescription,
+    },
   };
 }
 

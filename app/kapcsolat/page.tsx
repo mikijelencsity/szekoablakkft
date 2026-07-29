@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import QuoteForm from "@/components/QuoteForm";
+import { ogImage, twitterImage } from "@/lib/seo";
 
 const TITLE = "Kapcsolat";
 const DESCRIPTION =
@@ -11,8 +12,13 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/kapcsolat" },
-  openGraph: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION, url: "/kapcsolat" },
-  twitter: { title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
+  openGraph: {
+    ...ogImage,
+    title: `${TITLE} | Szeko Ablak Kft`,
+    description: DESCRIPTION,
+    url: "/kapcsolat",
+  },
+  twitter: { ...twitterImage, title: `${TITLE} | Szeko Ablak Kft`, description: DESCRIPTION },
 };
 
 const contacts = [
