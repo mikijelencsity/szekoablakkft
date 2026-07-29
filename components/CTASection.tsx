@@ -47,8 +47,9 @@ export default function CTASection() {
           Tegyük szebbé az otthonát.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/75 lg:text-xl">
-          Kérjen ingyenes, kötelezettség nélküli árajánlatot — utána egyeztetünk
-          egy helyszíni felmérésről.
+          Kérjen ingyenes, kötelezettség nélküli árajánlatot Baján vagy
+          Bács-Kiskun megye bármely településén — utána egyeztetünk egy
+          helyszíni felmérésről.
         </p>
         <div className="mt-10 flex justify-center">
           <Button href="#ajanlatkeres" variant="onDark">

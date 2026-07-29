@@ -81,6 +81,10 @@ export default function WhyUsSection() {
           <h2 className="mt-4 max-w-md text-3xl font-medium leading-tight tracking-tight lg:text-4xl">
             Az otthonán végzett munka jó kezekben.
           </h2>
+          <p className="mt-5 max-w-md text-white/65">
+            2010 óta dolgozunk Baján és Bács-Kiskun megye településein — saját,
+            sükösdi csapattal, alvállalkozók nélkül.
+          </p>
 
           <div className="mt-10 flex flex-col gap-8">
             {reasons.map((reason) => (
