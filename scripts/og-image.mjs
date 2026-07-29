@@ -1,9 +1,9 @@
-// Újrarajzolja az OG-kép alsó szövegsávját a public/og-image.jpg-n.
+// Újrarajzolja az OG-kép alsó szövegsávját a public/og-image-v2.jpg-n.
 // Futtatás: node scripts/og-image.mjs
 import sharp from "sharp";
 import { readFile, writeFile } from "node:fs/promises";
 
-const SRC = "public/og-image.jpg";
+const SRC = "public/og-image-v2.jpg";
 const W = 1200;
 const H = 630;
 

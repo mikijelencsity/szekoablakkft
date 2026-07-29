@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Szeko Ablak Kft",
   },
   description:
-    "Ablakcsere, ajtócsere, redőny és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat, 5 év garancia. Kérjen ingyenes árajánlatot.",
+    "Ablakcsere, ajtócsere, redőny, szúnyogháló és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat 2010 óta, 5 év termékgarancia, ingyenes helyszíni felmérés. Kérjen árajánlatot!",
   alternates: {
     canonical: "/",
   },
@@ -53,7 +53,7 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Szeko Ablak Kft",
   url: SITE_URL,
-  image: `${SITE_URL}/og-image.jpg`,
+  image: `${SITE_URL}/og-image-v2.jpg`,
   logo: `${SITE_URL}/szeko-logo.png`,
   telephone: ["+36202191858", "+36202194514"],
   email: "szeko2010@gmail.com",
