@@ -64,7 +64,10 @@ const localBusinessSchema = {
   telephone: ["+36202191858", "+36202194514"],
   email: "szeko2010@gmail.com",
   priceRange: "$$",
-  sameAs: ["https://www.facebook.com/szekoablak/"],
+  sameAs: [
+    "https://www.facebook.com/szekoablak/",
+    "https://maps.google.com/?cid=13320074204453036370",
+  ],
   foundingDate: "2010",
   address: {
     "@type": "PostalAddress",
