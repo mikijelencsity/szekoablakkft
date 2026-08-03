@@ -83,7 +83,8 @@ export default function WhyUsSection() {
           </h2>
           <p className="mt-5 max-w-md text-white/65">
             2010 óta dolgozunk Baján és Bács-Kiskun megye településein — saját,
-            sükösdi csapattal, alvállalkozók nélkül.
+            sükösdi csapattal, megbízható kivitelezéssel és látható
+            minőségben, alvállalkozók nélkül.
           </p>
 
           <div className="mt-10 flex flex-col gap-8">

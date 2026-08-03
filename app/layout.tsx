@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Szeko Ablak Kft",
   },
   description:
-    "Ablakcsere, ajtócsere, redőny, szúnyogháló és teljes körű felújítás Baján és Bács-Kiskun megyében. Saját csapat 2010 óta, 5 év termékgarancia, ingyenes helyszíni felmérés. Kérjen árajánlatot!",
+    "Ablakcsere, ajtócsere, redőny és szúnyogháló Baján és Bács-Kiskun megyében. Saját csapat 2010 óta, 5 év garancia, ingyenes árajánlat.",
   alternates: {
     canonical: "/",
   },
