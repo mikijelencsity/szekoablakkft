@@ -7,6 +7,7 @@ import PageCTA from "@/components/PageCTA";
 import FAQSection from "@/components/FAQSection";
 import Gallery from "@/components/Gallery";
 import { services, service } from "@/lib/szolgaltatasok-adat";
+import { postsForService } from "@/lib/blog-adat";
 import { category, firstSrc } from "@/lib/kepek";
 import { SITE_URL, ogImage, twitterImage } from "@/lib/seo";
 
@@ -86,6 +87,7 @@ export default async function ServiceDetailPage({
   };
 
   const otherServices = services.filter((o) => o.slug !== s.slug);
+  const relatedPosts = postsForService(s.slug);
 
   return (
     <main className="flex flex-1 flex-col">
@@ -171,6 +173,40 @@ export default async function ServiceDetailPage({
         title="Amit erről a szolgáltatásról kérdeznek."
         faqs={s.faqs}
       />
+
+      {relatedPosts.length > 0 && (
+        <section className="bg-surface py-20 lg:py-28">
+          <div className="container-px">
+            <Reveal>
+              <p className="text-sm font-medium uppercase tracking-wider text-brand">
+                Kapcsolódó cikkek
+              </p>
+              <h2 className="mt-4 text-3xl font-medium leading-tight tracking-tight text-ink lg:text-4xl">
+                Olvasson tovább {s.shortName} témában
+              </h2>
+            </Reveal>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {relatedPosts.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  href={`/blog/${rp.slug}`}
+                  className="group rounded-2xl bg-white px-6 py-6 shadow-[0_14px_34px_-24px_rgba(17,23,32,0.3)] transition-transform hover:-translate-y-1"
+                >
+                  <h3 className="text-lg font-medium leading-snug text-ink">
+                    {rp.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+                    {rp.excerpt}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+                    Elolvasom <span aria-hidden>→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white pb-20 lg:pb-28">
         <div className="container-px">

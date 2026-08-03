@@ -5,6 +5,7 @@ const nav = [
   { label: "Szolgáltatások", href: "/szolgaltatasok" },
   { label: "Rólunk", href: "/rolunk" },
   { label: "Referenciák", href: "/referenciak" },
+  { label: "Blog", href: "/blog" },
   { label: "Kapcsolat", href: "/kapcsolat" },
 ];
 
